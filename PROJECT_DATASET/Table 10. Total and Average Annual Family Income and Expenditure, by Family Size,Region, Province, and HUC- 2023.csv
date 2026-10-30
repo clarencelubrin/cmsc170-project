@@ -1,0 +1,1106 @@
+"Table 10. Total and Average Annual Family Income and Expenditure, by Family Size,Region, Province, and HUC: 2023"
+"Region, Province, and  HUC by Family Size","Family Size","Total Income  (in Millions)","Average Income  (in Thousands)","Total Expenditure  (in Millions)","Average Expenditure  (in Thousands)"
+"PHILIPPINES","Total Family Size",9706612.91,353.23,7091080.55,258.05
+"PHILIPPINES","One person",359495.68,203.16,258990.11,146.36
+"PHILIPPINES","Two persons",997687.51,287.78,708091.83,204.25
+"PHILIPPINES","Three persons",1708085.98,329.56,1253000.44,241.75
+"PHILIPPINES","Four persons",2179783.03,356.17,1603340.95,261.98
+"PHILIPPINES","Five persons",1824251.46,383.78,1339269.40,281.75
+"PHILIPPINES","Six persons",1179017.69,399.54,863897.83,292.75
+"PHILIPPINES","Seven persons or more",1458291.55,450.66,1064489.99,328.97
+"NATIONAL CAPITAL REGION","Total Family Size",1865801.30,513.52,1399046.40,385.05
+"NATIONAL CAPITAL REGION","One person",100106.67,415.90,68752.39,285.63
+"NATIONAL CAPITAL REGION","Two persons",204170.95,442.95,145482.99,315.62
+"NATIONAL CAPITAL REGION","Three persons",338990.00,482.76,253822.24,361.47
+"NATIONAL CAPITAL REGION","Four persons",412691.36,507.68,311508.10,383.20
+"NATIONAL CAPITAL REGION","Five persons",336495.10,523.83,257864.15,401.42
+"NATIONAL CAPITAL REGION","Six persons",215522.06,563.52,166053.37,434.17
+"NATIONAL CAPITAL REGION","Seven persons or more",257825.16,658.04,195563.16,499.13
+"City of Manila","Total Family Size",246232.67,482.79,199009.44,390.20
+"City of Manila","One person",10396.45,258.18,8095.82,201.04
+"City of Manila","Two persons",21550.85,346.93,16694.50,268.75
+"City of Manila","Three persons",37961.59,429.30,30870.83,349.11
+"City of Manila","Four persons",56833.64,539.66,43850.81,416.38
+"City of Manila","Five persons",44176.06,490.80,36144.57,401.57
+"City of Manila","Six persons",31376.41,537.87,26855.11,460.37
+"City of Manila","Seven persons or more",43937.67,670.27,36497.80,556.77
+"City of Mandaluyong","Total Family Size",93875.35,666.02,71629.10,508.19
+"City of Mandaluyong","One person",7629.57,472.57,5549.41,343.73
+"City of Mandaluyong","Two persons",12228.71,540.13,9086.52,401.34
+"City of Mandaluyong","Three persons",19413.17,676.47,14433.37,502.94
+"City of Mandaluyong","Four persons",21545.80,775.91,15938.82,573.99
+"City of Mandaluyong","Five persons",14127.82,687.05,11440.22,556.35
+"City of Mandaluyong","Six persons",9366.67,754.57,7329.56,590.46
+"City of Mandaluyong","Seven persons or more",9563.61,751.74,7851.20,617.14
+"City of San Juan","Total Family Size",24320.15,842.81,18721.17,648.78
+"City of San Juan","One person",4231.27,972.32,2448.25,562.59
+"City of San Juan","Two persons",2199.37,595.10,1766.54,477.98
+"City of San Juan","Three persons",3887.22,816.87,3120.42,655.73
+"City of San Juan","Four persons",7081.37,827.99,5967.99,697.81
+"City of San Juan","Five persons",2723.87,916.75,1995.60,671.64
+"City of San Juan","Six persons",1620.18,807.35,1343.30,669.37
+"City of San Juan","Seven persons or more",2576.86,1022.87,2079.07,825.28
+"Quezon City","Total Family Size",359208.80,480.70,293025.42,392.13
+"Quezon City","One person",12274.97,309.41,10230.00,257.87
+"Quezon City","Two persons",28066.30,354.33,22843.53,288.40
+"Quezon City","Three persons",70762.72,457.35,58891.94,380.63
+"Quezon City","Four persons",72151.12,439.17,58145.59,353.92
+"Quezon City","Five persons",74011.02,514.54,60939.47,423.66
+"Quezon City","Six persons",48159.64,588.51,38853.86,474.79
+"Quezon City","Seven persons or more",53783.03,642.56,43121.03,515.18
+"City of Marikina","Total Family Size",60399.48,556.55,48959.80,451.14
+"City of Marikina","One person",1487.35,300.67,1270.47,256.83
+"City of Marikina","Two persons",6132.00,433.53,5047.63,356.87
+"City of Marikina","Three persons",10884.65,505.20,8700.42,403.82
+"City of Marikina","Four persons",12779.95,549.55,10602.52,455.92
+"City of Marikina","Five persons",12057.31,593.22,9903.18,487.23
+"City of Marikina","Six persons",7100.95,659.74,5481.55,509.28
+"City of Marikina","Seven persons or more",9957.26,735.17,7954.02,587.27
+"City of Pasig","Total Family Size",130765.02,590.37,94232.81,425.44
+"City of Pasig","One person",4928.80,376.20,3354.70,256.05
+"City of Pasig","Two persons",17578.56,502.90,11871.86,339.64
+"City of Pasig","Three persons",22562.50,587.96,16185.68,421.79
+"City of Pasig","Four persons",33020.29,630.12,24216.19,462.11
+"City of Pasig","Five persons",21723.73,610.48,15889.57,446.53
+"City of Pasig","Six persons",13687.98,601.32,10472.52,460.06
+"City of Pasig","Seven persons or more",17263.17,709.96,12242.29,503.47
+"City of Caloocan","Total Family Size",154161.91,393.24,116395.79,296.90
+"City of Caloocan","One person",4737.01,274.17,3418.39,197.85
+"City of Caloocan","Two persons",14624.45,300.36,10791.85,221.64
+"City of Caloocan","Three persons",27325.12,349.09,20559.04,262.65
+"City of Caloocan","Four persons",34038.68,388.18,26566.32,302.96
+"City of Caloocan","Five persons",28275.08,409.15,21353.78,309.00
+"City of Caloocan","Six persons",21648.33,450.08,16118.40,335.11
+"City of Caloocan","Seven persons or more",23513.24,548.14,17588.00,410.01
+"City of Malabon","Total Family Size",34270.92,380.60,26789.66,297.51
+"City of Malabon","One person",1060.16,245.17,810.68,187.47
+"City of Malabon","Two persons",3464.32,315.58,2498.81,227.63
+"City of Malabon","Three persons",4647.72,321.53,3670.54,253.92
+"City of Malabon","Four persons",8600.27,361.16,6823.15,286.53
+"City of Malabon","Five persons",7189.90,400.34,5746.05,319.94
+"City of Malabon","Six persons",3878.34,452.36,3085.49,359.89
+"City of Malabon","Seven persons or more",5430.21,546.19,4154.95,417.92
+"City of Navotas","Total Family Size",21291.41,336.98,17390.43,275.24
+"City of Navotas","One person",208.27,158.63,170.94,130.20
+"City of Navotas","Two persons",1478.63,254.18,1168.66,200.89
+"City of Navotas","Three persons",3463.04,294.12,2788.53,236.83
+"City of Navotas","Four persons",5074.34,316.00,4174.93,259.99
+"City of Navotas","Five persons",4686.08,359.51,3876.86,297.43
+"City of Navotas","Six persons",3095.79,394.26,2536.74,323.06
+"City of Navotas","Seven persons or more",3285.25,447.97,2673.76,364.59
+"City of Valenzuela","Total Family Size",69892.16,403.07,52941.88,305.32
+"City of Valenzuela","One person",2180.47,206.98,1737.67,164.95
+"City of Valenzuela","Two persons",6323.20,309.59,4619.58,226.18
+"City of Valenzuela","Three persons",11871.07,346.69,9086.21,265.36
+"City of Valenzuela","Four persons",16262.01,397.24,12534.67,306.19
+"City of Valenzuela","Five persons",14131.16,454.73,10610.00,341.42
+"City of Valenzuela","Six persons",9076.60,465.69,7004.89,359.40
+"City of Valenzuela","Seven persons or more",10047.66,601.81,7348.86,440.16
+"City of Las Pi�as","Total Family Size",96816.95,594.93,63707.77,391.48
+"City of Las Pi�as","One person",3994.85,358.97,2943.74,264.52
+"City of Las Pi�as","Two persons",11084.99,471.67,7325.41,311.70
+"City of Las Pi�as","Three persons",18689.38,545.00,12592.50,367.21
+"City of Las Pi�as","Four persons",21540.01,637.61,14153.53,418.96
+"City of Las Pi�as","Five persons",17067.97,649.64,11404.29,434.07
+"City of Las Pi�as","Six persons",11953.75,699.29,7510.92,439.39
+"City of Las Pi�as","Seven persons or more",12486.00,749.24,7777.38,466.69
+"City of Muntinlupa","Total Family Size",80328.59,506.18,59693.01,376.15
+"City of Muntinlupa","One person",2475.92,320.63,1816.46,235.23
+"City of Muntinlupa","Two persons",8645.96,416.46,6449.11,310.64
+"City of Muntinlupa","Three persons",15099.97,471.66,11050.34,345.17
+"City of Muntinlupa","Four persons",18608.59,501.38,14283.29,384.84
+"City of Muntinlupa","Five persons",14971.96,512.22,11229.65,384.19
+"City of Muntinlupa","Six persons",8392.71,557.84,6316.31,419.83
+"City of Muntinlupa","Seven persons or more",12133.47,721.83,8547.87,508.52
+"City of Para�aque","Total Family Size",114375.68,556.45,79030.30,384.49
+"City of Para�aque","One person",4821.99,337.93,3536.00,247.81
+"City of Para�aque","Two persons",13442.45,487.29,9127.59,330.87
+"City of Para�aque","Three persons",26753.23,617.89,17021.77,393.13
+"City of Para�aque","Four persons",28376.68,569.35,19842.32,398.11
+"City of Para�aque","Five persons",17745.78,544.38,12745.21,390.98
+"City of Para�aque","Six persons",11261.17,573.13,7958.40,405.04
+"City of Para�aque","Seven persons or more",11974.38,654.15,8799.01,480.68
+"Pasay City","Total Family Size",58005.62,477.31,40466.94,332.99
+"Pasay City","One person",2894.65,315.77,2014.63,219.77
+"Pasay City","Two persons",4810.59,360.88,3350.71,251.36
+"Pasay City","Three persons",10211.70,433.62,6869.71,291.71
+"Pasay City","Four persons",14563.88,484.17,10241.39,340.47
+"Pasay City","Five persons",10076.15,495.27,7200.03,353.90
+"Pasay City","Six persons",6902.85,514.36,5068.17,377.65
+"Pasay City","Seven persons or more",8545.80,734.66,5722.31,491.93
+"City of Makati","Total Family Size",164347.09,799.54,104194.84,506.90
+"City of Makati","One person",32212.63,992.93,18171.47,560.12
+"City of Makati","Two persons",32682.50,869.19,20151.46,535.93
+"City of Makati","Three persons",29231.74,789.27,18802.85,507.69
+"City of Makati","Four persons",26508.02,701.02,17714.95,468.48
+"City of Makati","Five persons",19040.94,642.72,13293.74,448.72
+"City of Makati","Six persons",11471.74,759.24,7635.26,505.33
+"City of Makati","Seven persons or more",13199.54,828.87,8425.11,529.06
+"Pateros","Total Family Size",7135.91,504.77,5140.35,363.61
+"Pateros","One person",148.36,237.26,115.21,184.24
+"Pateros","Two persons",832.87,417.72,568.16,284.96
+"Pateros","Three persons",1346.22,478.15,936.47,332.61
+"Pateros","Four persons",1529.66,489.14,1135.13,362.98
+"Pateros","Five persons",1359.71,510.57,1025.68,385.14
+"Pateros","Six persons",919.33,592.97,668.32,431.07
+"Pateros","Seven persons or more",999.75,734.24,691.38,507.77
+"City of Taguig","Total Family Size",150373.59,519.60,107717.67,372.21
+"City of Taguig","One person",4423.97,329.83,3068.55,228.78
+"City of Taguig","Two persons",19025.21,568.05,12121.06,361.91
+"City of Taguig","Three persons",24878.94,461.49,18241.63,338.37
+"City of Taguig","Four persons",34177.05,480.91,25316.51,356.23
+"City of Taguig","Five persons",33130.56,579.46,23066.25,403.43
+"City of Taguig","Six persons",15609.60,548.44,11814.56,415.10
+"City of Taguig","Seven persons or more",19128.26,599.92,14089.12,441.88
+"CORDILLERA ADMINISTRATIVE  REGION","Total Family Size",166577.62,359.24,114932.90,247.86
+"CORDILLERA ADMINISTRATIVE  REGION","One person",8246.33,193.29,5837.41,136.83
+"CORDILLERA ADMINISTRATIVE  REGION","Two persons",18478.79,283.92,12498.60,192.03
+"CORDILLERA ADMINISTRATIVE  REGION","Three persons",29510.60,338.68,20276.99,232.71
+"CORDILLERA ADMINISTRATIVE  REGION","Four persons",35338.54,380.78,24013.00,258.74
+"CORDILLERA ADMINISTRATIVE  REGION","Five persons",32968.79,396.58,23516.95,282.88
+"CORDILLERA ADMINISTRATIVE  REGION","Six persons",19038.35,419.81,13234.10,291.82
+"CORDILLERA ADMINISTRATIVE  REGION","Seven persons or more",22996.22,483.89,15555.87,327.33
+"ABRA","Total Family Size",16345.74,274.21,13381.12,224.48
+"ABRA","One person",694.66,145.50,595.60,124.75
+"ABRA","Two persons",1532.30,189.53,1307.72,161.75
+"ABRA","Three persons",2741.27,242.43,2261.15,199.97
+"ABRA","Four persons",4131.09,311.52,3293.01,248.32
+"ABRA","Five persons",2898.90,304.23,2419.02,253.87
+"ABRA","Six persons",2129.30,333.62,1698.28,266.09
+"ABRA","Seven persons or more",2218.22,353.70,1806.34,288.03
+"BENGUET  (Excluding City of Baguio)","Total Family Size",46118.30,342.89,31994.97,237.88
+"BENGUET  (Excluding City of Baguio)","One person",2813.69,196.51,2031.08,141.85
+"BENGUET  (Excluding City of Baguio)","Two persons",6205.13,287.25,4113.74,190.43
+"BENGUET  (Excluding City of Baguio)","Three persons",9558.68,349.06,6369.61,232.60
+"BENGUET  (Excluding City of Baguio)","Four persons",8850.13,355.52,5970.25,239.83
+"BENGUET  (Excluding City of Baguio)","Five persons",9434.83,380.34,6804.06,274.28
+"BENGUET  (Excluding City of Baguio)","Six persons",4334.88,406.08,3225.68,302.17
+"BENGUET  (Excluding City of Baguio)","Seven persons or more",4920.96,454.81,3480.54,321.68
+"..City of Baguio","Total Family Size",47232.91,443.20,31266.48,293.38
+"..City of Baguio","One person",2295.78,250.69,1585.05,173.08
+"..City of Baguio","Two persons",5406.85,334.08,3662.89,226.32
+"..City of Baguio","Three persons",9175.48,404.55,6202.07,273.45
+"..City of Baguio","Four persons",10641.95,475.56,6824.06,304.95
+"..City of Baguio","Five persons",9923.89,507.27,6902.36,352.82
+"..City of Baguio","Six persons",4770.61,540.14,3083.06,349.07
+"..City of Baguio","Seven persons or more",5018.35,645.33,3007.00,386.68
+"IFUGAO","Total Family Size",15517.48,322.19,9665.75,200.69
+"IFUGAO","One person",815.86,165.52,511.14,103.70
+"IFUGAO","Two persons",1659.64,300.63,888.36,160.92
+"IFUGAO","Three persons",2464.11,291.51,1498.99,177.33
+"IFUGAO","Four persons",2706.07,305.31,1822.16,205.58
+"IFUGAO","Five persons",2645.70,332.98,1737.59,218.69
+"IFUGAO","Six persons",2199.01,377.07,1343.29,230.34
+"IFUGAO","Seven persons or more",3027.09,457.29,1864.21,281.62
+"KALINGA","Total Family Size",18307.71,391.39,12812.83,273.92
+"KALINGA","One person",665.68,207.34,455.10,141.75
+"KALINGA","Two persons",1647.39,330.17,1127.32,225.94
+"KALINGA","Three persons",2326.20,329.76,1688.35,239.34
+"KALINGA","Four persons",3819.15,409.58,2631.26,282.18
+"KALINGA","Five persons",3610.13,413.95,2569.54,294.63
+"KALINGA","Six persons",2437.46,423.01,1704.08,295.74
+"KALINGA","Seven persons or more",3801.70,492.86,2637.18,341.89
+"MOUNTAIN PROVINCE","Total Family Size",12292.87,312.73,8512.10,216.55
+"MOUNTAIN PROVINCE","One person",766.77,160.23,529.39,110.63
+"MOUNTAIN PROVINCE","Two persons",1402.54,239.62,950.23,162.34
+"MOUNTAIN PROVINCE","Three persons",1876.98,319.19,1239.18,210.73
+"MOUNTAIN PROVINCE","Four persons",2517.84,349.87,1688.60,234.64
+"MOUNTAIN PROVINCE","Five persons",2452.98,338.52,1750.23,241.54
+"MOUNTAIN PROVINCE","Six persons",1736.39,381.22,1229.63,269.96
+"MOUNTAIN PROVINCE","Seven persons or more",1539.37,405.99,1124.84,296.67
+"APAYAO","Total Family Size",10762.60,374.14,7299.65,253.76
+"APAYAO","One person",193.89,130.35,130.04,87.43
+"APAYAO","Two persons",624.93,219.23,448.35,157.28
+"APAYAO","Three persons",1367.88,312.78,1017.65,232.69
+"APAYAO","Four persons",2672.31,387.86,1783.65,258.88
+"APAYAO","Five persons",2002.37,376.25,1334.14,250.69
+"APAYAO","Six persons",1430.70,431.97,950.07,286.86
+"APAYAO","Seven persons or more",2470.52,545.25,1635.75,361.02
+"REGION I - ILOCOS REGION","Total Family Size",443817.42,339.69,303687.83,232.44
+"REGION I - ILOCOS REGION","One person",17579.96,182.54,11832.61,122.86
+"REGION I - ILOCOS REGION","Two persons",46484.76,251.32,31375.24,169.63
+"REGION I - ILOCOS REGION","Three persons",80722.97,318.12,54823.83,216.05
+"REGION I - ILOCOS REGION","Four persons",99511.22,350.91,68304.12,240.87
+"REGION I - ILOCOS REGION","Five persons",83905.03,383.75,57730.01,264.04
+"REGION I - ILOCOS REGION","Six persons",54180.96,408.11,37260.23,280.66
+"REGION I - ILOCOS REGION","Seven persons or more",61432.52,449.98,42361.78,310.29
+"ILOCOS NORTE","Total Family Size",69671.55,447.86,47010.22,302.19
+"ILOCOS NORTE","One person",3226.76,253.27,2124.31,166.74
+"ILOCOS NORTE","Two persons",6607.92,320.02,4403.01,213.24
+"ILOCOS NORTE","Three persons",13015.93,440.47,8426.87,285.17
+"ILOCOS NORTE","Four persons",17190.40,450.87,11675.87,306.23
+"ILOCOS NORTE","Five persons",13764.16,506.01,9361.70,344.16
+"ILOCOS NORTE","Six persons",7632.68,497.97,5367.97,350.22
+"ILOCOS NORTE","Seven persons or more",8233.71,687.94,5650.48,472.11
+"ILOCOS SUR","Total Family Size",61961.57,355.63,40433.29,232.07
+"ILOCOS SUR","One person",2358.98,188.26,1623.09,129.53
+"ILOCOS SUR","Two persons",6666.34,284.80,4263.01,182.12
+"ILOCOS SUR","Three persons",13321.87,345.42,8787.73,227.86
+"ILOCOS SUR","Four persons",14209.52,349.12,9350.10,229.73
+"ILOCOS SUR","Five persons",10447.04,364.55,7033.39,245.43
+"ILOCOS SUR","Six persons",7066.79,482.90,4437.93,303.26
+"ILOCOS SUR","Seven persons or more",7891.02,501.51,4938.03,313.83
+"LA UNION","Total Family Size",81591.39,393.32,53800.97,259.35
+"LA UNION","One person",2809.52,176.79,1794.08,112.89
+"LA UNION","Two persons",7327.38,277.63,4657.19,176.46
+"LA UNION","Three persons",13442.44,350.45,8856.80,230.90
+"LA UNION","Four persons",18579.42,408.62,12134.66,266.88
+"LA UNION","Five persons",16657.42,453.94,11351.91,309.36
+"LA UNION","Six persons",9089.90,448.21,6032.43,297.45
+"LA UNION","Seven persons or more",13685.32,561.82,8973.90,368.41
+"PANGASINAN","Total Family Size",230592.91,299.75,162443.35,211.16
+"PANGASINAN","One person",9184.70,166.56,6291.13,114.09
+"PANGASINAN","Two persons",25883.13,226.03,18052.02,157.64
+"PANGASINAN","Three persons",40942.73,278.00,28752.43,195.23
+"PANGASINAN","Four persons",49531.87,310.97,35143.49,220.64
+"PANGASINAN","Five persons",43036.41,341.31,29983.01,237.79
+"PANGASINAN","Six persons",30391.60,368.30,21421.89,259.60
+"PANGASINAN","Seven persons or more",31622.48,374.41,22799.38,269.94
+"REGION II - CAGAYAN VALLEY","Total Family Size",287625.50,310.55,198196.14,214.00
+"REGION II - CAGAYAN VALLEY","One person",8291.45,151.59,5900.30,107.88
+"REGION II - CAGAYAN VALLEY","Two persons",31642.41,243.04,21273.68,163.40
+"REGION II - CAGAYAN VALLEY","Three persons",49843.10,279.50,34897.63,195.69
+"REGION II - CAGAYAN VALLEY","Four persons",70589.37,313.60,49799.35,221.23
+"REGION II - CAGAYAN VALLEY","Five persons",57888.14,351.80,39295.79,238.81
+"REGION II - CAGAYAN VALLEY","Six persons",31394.21,367.84,21241.65,248.89
+"REGION II - CAGAYAN VALLEY","Seven persons or more",37976.81,431.79,25787.73,293.20
+"BATANES","Total Family Size",2469.54,434.32,1525.76,268.34
+"BATANES","One person",203.24,236.35,130.37,151.61
+"BATANES","Two persons",333.25,322.28,217.91,210.73
+"BATANES","Three persons",803.67,516.50,459.95,295.60
+"BATANES","Four persons",510.14,468.09,314.50,288.58
+"BATANES","Five persons",405.07,547.92,262.14,354.59
+"BATANES","Six persons",118.80,436.12,82.08,301.31
+"BATANES","Seven persons or more",95.38,708.78,58.81,437.00
+"CAGAYAN","Total Family Size",101392.29,330.50,68893.30,224.57
+"CAGAYAN","One person",2956.47,158.89,2014.05,108.24
+"CAGAYAN","Two persons",10314.05,261.30,6651.09,168.50
+"CAGAYAN","Three persons",16174.33,276.36,11329.83,193.59
+"CAGAYAN","Four persons",24840.03,326.51,17414.54,228.90
+"CAGAYAN","Five persons",20231.05,374.99,13825.68,256.27
+"CAGAYAN","Six persons",10875.42,374.41,7689.80,264.74
+"CAGAYAN","Seven persons or more",16000.94,514.50,9968.32,320.52
+"ISABELA","Total Family Size",127976.88,299.46,86418.68,202.22
+"ISABELA","One person",3271.49,154.95,2277.94,107.89
+"ISABELA","Two persons",15457.56,234.46,10424.55,158.12
+"ISABELA","Three persons",23318.24,275.35,15921.57,188.01
+"ISABELA","Four persons",32838.74,307.21,22690.01,212.27
+"ISABELA","Five persons",26500.18,345.99,17324.16,226.19
+"ISABELA","Six persons",12700.53,354.48,8138.79,227.16
+"ISABELA","Seven persons or more",13890.15,382.46,9641.65,265.48
+"NUEVA VIZCAYA","Total Family Size",40791.86,295.27,31867.79,230.68
+"NUEVA VIZCAYA","One person",1374.92,130.09,1152.49,109.04
+"NUEVA VIZCAYA","Two persons",3784.06,222.17,2910.17,170.86
+"NUEVA VIZCAYA","Three persons",6806.99,279.49,5466.78,224.47
+"NUEVA VIZCAYA","Four persons",8690.30,296.42,6921.04,236.07
+"NUEVA VIZCAYA","Five persons",7719.49,312.93,5957.05,241.49
+"NUEVA VIZCAYA","Six persons",5916.93,383.20,4241.78,274.71
+"NUEVA VIZCAYA","Seven persons or more",6499.18,387.63,5218.46,311.25
+"QUIRINO","Total Family Size",14994.93,311.14,9490.61,196.93
+"QUIRINO","One person",485.34,136.89,325.44,91.79
+"QUIRINO","Two persons",1753.50,260.62,1069.96,159.02
+"QUIRINO","Three persons",2739.87,297.53,1719.50,186.72
+"QUIRINO","Four persons",3710.17,316.60,2459.26,209.85
+"QUIRINO","Five persons",3032.36,352.62,1926.76,224.05
+"QUIRINO","Six persons",1782.52,374.63,1089.19,228.91
+"QUIRINO","Seven persons or more",1491.16,410.35,900.50,247.80
+"REGION III - CENTRAL LUZON","Total Family Size",1172048.83,375.24,932991.73,298.70
+"REGION III - CENTRAL LUZON","One person",35693.16,207.47,28226.48,164.07
+"REGION III - CENTRAL LUZON","Two persons",116895.76,296.06,91584.32,231.95
+"REGION III - CENTRAL LUZON","Three persons",198218.25,341.21,158968.67,273.65
+"REGION III - CENTRAL LUZON","Four persons",268971.32,364.55,216817.18,293.87
+"REGION III - CENTRAL LUZON","Five persons",228288.53,403.51,184213.35,325.61
+"REGION III - CENTRAL LUZON","Six persons",149140.15,448.23,117115.47,351.98
+"REGION III - CENTRAL LUZON","Seven persons or more",174841.65,515.16,136066.27,400.91
+"AURORA","Total Family Size",17467.09,305.27,13433.51,234.77
+"AURORA","One person",706.47,159.93,750.27,169.85
+"AURORA","Two persons",2254.00,279.80,1507.64,187.15
+"AURORA","Three persons",3515.37,291.87,2668.08,221.53
+"AURORA","Four persons",4227.37,344.14,3133.30,255.08
+"AURORA","Five persons",2928.18,301.22,2274.74,234.00
+"AURORA","Six persons",1834.28,314.79,1480.46,254.07
+"AURORA","Seven persons or more",2001.42,410.97,1619.03,332.45
+"BATAAN","Total Family Size",83190.70,387.33,60824.59,283.20
+"BATAAN","One person",2394.96,227.18,1564.46,148.40
+"BATAAN","Two persons",7930.88,289.91,5794.17,211.81
+"BATAAN","Three persons",14524.94,354.03,10700.96,260.83
+"BATAAN","Four persons",19972.01,377.41,15327.62,289.64
+"BATAAN","Five persons",16544.06,435.94,11948.82,314.85
+"BATAAN","Six persons",9799.00,415.88,7396.21,313.90
+"BATAAN","Seven persons or more",12024.86,561.36,8092.35,377.78
+"BULACAN","Total Family Size",342693.71,371.94,276431.53,300.02
+"BULACAN","One person",9690.22,185.11,7745.05,147.95
+"BULACAN","Two persons",34971.58,303.28,27551.35,238.93
+"BULACAN","Three persons",58140.76,340.29,46932.96,274.70
+"BULACAN","Four persons",79281.85,347.70,65301.23,286.39
+"BULACAN","Five persons",70455.88,414.80,57252.94,337.07
+"BULACAN","Six persons",42080.02,454.13,33141.30,357.66
+"BULACAN","Seven persons or more",48073.41,520.74,38506.70,417.11
+"NUEVA ECIJA","Total Family Size",194488.54,323.63,153490.03,255.40
+"NUEVA ECIJA","One person",6523.41,186.16,5565.52,158.82
+"NUEVA ECIJA","Two persons",22761.26,262.72,18579.50,214.46
+"NUEVA ECIJA","Three persons",35592.07,289.31,28868.33,234.66
+"NUEVA ECIJA","Four persons",45852.06,325.91,36037.36,256.15
+"NUEVA ECIJA","Five persons",32225.31,330.38,25693.58,263.42
+"NUEVA ECIJA","Six persons",24716.17,399.78,18711.36,302.65
+"NUEVA ECIJA","Seven persons or more",26818.26,477.09,20034.39,356.40
+"PAMPANGA  (Excluding City of Angeles)","Total Family Size",251756.60,431.51,200610.89,343.85
+"PAMPANGA  (Excluding City of Angeles)","One person",4851.89,255.40,3830.16,201.62
+"PAMPANGA  (Excluding City of Angeles)","Two persons",16186.63,330.74,12207.38,249.43
+"PAMPANGA  (Excluding City of Angeles)","Three persons",37104.99,373.84,30168.15,303.95
+"PAMPANGA  (Excluding City of Angeles)","Four persons",58143.01,414.23,46885.24,334.03
+"PAMPANGA  (Excluding City of Angeles)","Five persons",54644.84,443.88,43943.51,356.96
+"PAMPANGA  (Excluding City of Angeles)","Six persons",37852.34,495.48,30082.78,393.78
+"PAMPANGA  (Excluding City of Angeles)","Seven persons or more",42972.90,562.68,33493.67,438.56
+"..City of Angeles","Total Family Size",69727.85,501.93,51873.44,373.41
+"..City of Angeles","One person",3005.82,316.86,2307.68,243.27
+"..City of Angeles","Two persons",8435.28,443.32,5884.61,309.27
+"..City of Angeles","Three persons",11340.25,453.13,8547.39,341.53
+"..City of Angeles","Four persons",15179.80,488.32,11561.14,371.91
+"..City of Angeles","Five persons",12294.48,544.34,9241.87,409.18
+"..City of Angeles","Six persons",8100.56,586.59,6033.52,436.91
+"..City of Angeles","Seven persons or more",11371.67,635.39,8297.22,463.61
+"TARLAC","Total Family Size",134488.68,367.82,109570.52,299.67
+"TARLAC","One person",4725.31,189.61,3758.81,150.83
+"TARLAC","Two persons",15141.59,281.69,12102.35,225.15
+"TARLAC","Three persons",24958.33,378.72,19630.73,297.88
+"TARLAC","Four persons",28726.38,366.44,23508.72,299.88
+"TARLAC","Five persons",24426.52,388.89,21067.60,335.41
+"TARLAC","Six persons",14516.41,435.36,11546.95,346.30
+"TARLAC","Seven persons or more",21994.14,472.87,17955.36,386.04
+"ZAMBALES  (Excluding City of Olongapo)","Total Family Size",53999.20,302.87,45889.54,257.39
+"ZAMBALES  (Excluding City of Olongapo)","One person",2656.49,229.98,1688.73,146.20
+"ZAMBALES  (Excluding City of Olongapo)","Two persons",6236.93,236.01,5382.14,203.66
+"ZAMBALES  (Excluding City of Olongapo)","Three persons",8870.46,269.97,7865.53,239.38
+"ZAMBALES  (Excluding City of Olongapo)","Four persons",12279.38,305.73,10387.76,258.64
+"ZAMBALES  (Excluding City of Olongapo)","Five persons",9985.82,328.48,8645.65,284.40
+"ZAMBALES  (Excluding City of Olongapo)","Six persons",7294.40,381.03,6223.74,325.11
+"ZAMBALES  (Excluding City of Olongapo)","Seven persons or more",6675.71,376.16,5695.99,320.96
+"..City of Olongapo","Total Family Size",24236.46,385.44,20867.68,331.87
+"..City of Olongapo","One person",1138.59,240.49,1015.80,214.56
+"..City of Olongapo","Two persons",2977.60,319.03,2575.19,275.91
+"..City of Olongapo","Three persons",4171.10,381.60,3586.54,328.12
+"..City of Olongapo","Four persons",5309.46,382.27,4674.80,336.57
+"..City of Olongapo","Five persons",4783.44,406.02,4144.63,351.80
+"..City of Olongapo","Six persons",2946.98,477.77,2499.16,405.17
+"..City of Olongapo","Seven persons or more",2909.28,481.46,2371.56,392.47
+"REGION IVA - CALABARZON","Total Family Size",1835949.76,426.53,1335720.46,310.32
+"REGION IVA - CALABARZON","One person",64738.47,212.73,48047.72,157.88
+"REGION IVA - CALABARZON","Two persons",199687.06,340.23,144569.09,246.32
+"REGION IVA - CALABARZON","Three persons",344418.82,405.95,252111.57,297.15
+"REGION IVA - CALABARZON","Four persons",409014.82,429.61,301517.60,316.70
+"REGION IVA - CALABARZON","Five persons",344658.32,487.48,247193.11,349.63
+"REGION IVA - CALABARZON","Six persons",210945.33,488.72,149843.71,347.16
+"REGION IVA - CALABARZON","Seven persons or more",262486.93,553.80,192437.66,406.01
+"BATANGAS","Total Family Size",327130.55,402.17,227519.31,279.71
+"BATANGAS","One person",12573.53,195.03,8519.87,132.15
+"BATANGAS","Two persons",34739.79,304.44,24802.96,217.36
+"BATANGAS","Three persons",56199.94,366.42,38891.12,253.57
+"BATANGAS","Four persons",78931.42,412.19,56776.40,296.49
+"BATANGAS","Five persons",60235.01,493.97,39859.14,326.87
+"BATANGAS","Six persons",37600.42,486.17,25307.66,327.23
+"BATANGAS","Seven persons or more",46850.43,516.65,33362.16,367.91
+"CAVITE","Total Family Size",527020.97,457.62,361034.35,313.49
+"CAVITE","One person",16694.21,221.80,11186.96,148.63
+"CAVITE","Two persons",62848.21,355.27,43864.69,247.96
+"CAVITE","Three persons",102731.76,460.80,70493.48,316.20
+"CAVITE","Four persons",116128.62,467.00,78194.04,314.45
+"CAVITE","Five persons",97954.77,489.28,67495.79,337.14
+"CAVITE","Six persons",57771.19,536.29,38229.63,354.89
+"CAVITE","Seven persons or more",72892.20,607.71,51569.76,429.94
+"LAGUNA","Total Family Size",440820.18,441.89,331637.30,332.44
+"LAGUNA","One person",17160.78,225.82,13935.83,183.38
+"LAGUNA","Two persons",48488.67,378.13,33788.08,263.49
+"LAGUNA","Three persons",85068.48,417.57,66284.45,325.37
+"LAGUNA","Four persons",92733.87,430.30,71556.40,332.04
+"LAGUNA","Five persons",82342.08,501.75,63154.52,384.83
+"LAGUNA","Six persons",55580.88,509.46,39941.35,366.10
+"LAGUNA","Seven persons or more",59445.42,589.05,42976.67,425.86
+"QUEZON (Excluding City of Lucena)","Total Family Size",122275.35,247.11,107418.39,217.08
+"QUEZON (Excluding City of Lucena)","One person",4058.58,115.34,3572.59,101.53
+"QUEZON (Excluding City of Lucena)","Two persons",13874.53,202.14,11467.95,167.08
+"QUEZON (Excluding City of Lucena)","Three persons",21660.20,227.62,19144.69,201.18
+"QUEZON (Excluding City of Lucena)","Four persons",28565.99,259.41,25128.47,228.20
+"QUEZON (Excluding City of Lucena)","Five persons",24585.87,270.10,21739.35,238.83
+"QUEZON (Excluding City of Lucena)","Six persons",13681.99,298.13,12105.90,263.78
+"QUEZON (Excluding City of Lucena)","Seven persons or more",15848.19,324.73,14259.44,292.18
+"..City of Lucena","Total Family Size",24776.36,361.93,20585.22,300.70
+"..City of Lucena","One person",754.40,182.17,676.11,163.27
+"..City of Lucena","Two persons",2057.65,279.54,1681.86,228.49
+"..City of Lucena","Three persons",4734.06,370.84,3727.43,291.98
+"..City of Lucena","Four persons",5102.30,350.45,4245.75,291.62
+"..City of Lucena","Five persons",4463.06,392.06,3783.24,332.34
+"..City of Lucena","Six persons",2994.81,394.04,2529.21,332.78
+"..City of Lucena","Seven persons or more",4670.08,438.68,3941.62,370.25
+"RIZAL","Total Family Size",393926.36,506.05,287525.89,369.37
+"RIZAL","One person",13496.98,273.99,10156.36,206.17
+"RIZAL","Two persons",37678.21,411.00,28963.55,315.94
+"RIZAL","Three persons",74024.38,461.29,53570.40,333.83
+"RIZAL","Four persons",87552.62,509.88,65616.55,382.13
+"RIZAL","Five persons",75077.53,634.34,51161.06,432.27
+"RIZAL","Six persons",43316.03,515.85,31729.96,377.87
+"RIZAL","Seven persons or more",62780.61,609.63,46328.01,449.87
+"MIMAROPA REGION","Total Family Size",219015.17,267.36,155454.26,189.77
+"MIMAROPA REGION","One person",8373.87,148.67,5810.38,103.16
+"MIMAROPA REGION","Two persons",31745.22,263.39,19946.83,165.50
+"MIMAROPA REGION","Three persons",40152.02,259.39,28633.29,184.98
+"MIMAROPA REGION","Four persons",47114.48,264.08,34255.66,192.01
+"MIMAROPA REGION","Five persons",38910.62,291.35,28301.64,211.92
+"MIMAROPA REGION","Six persons",25827.95,285.84,18961.31,209.85
+"MIMAROPA REGION","Seven persons or more",26891.01,315.60,19545.14,229.38
+"MARINDUQUE","Total Family Size",16627.80,280.50,13211.58,222.87
+"MARINDUQUE","One person",704.72,160.83,560.84,127.99
+"MARINDUQUE","Two persons",2233.45,222.03,1660.65,165.09
+"MARINDUQUE","Three persons",2980.40,272.79,2287.34,209.35
+"MARINDUQUE","Four persons",3731.46,308.31,2978.42,246.09
+"MARINDUQUE","Five persons",2778.77,284.32,2256.02,230.83
+"MARINDUQUE","Six persons",1965.26,323.53,1662.28,273.65
+"MARINDUQUE","Seven persons or more",2233.73,374.70,1806.03,302.96
+"OCCIDENTAL MINDORO","Total Family Size",35510.45,269.17,25094.48,190.21
+"OCCIDENTAL MINDORO","One person",975.87,130.25,686.62,91.64
+"OCCIDENTAL MINDORO","Two persons",3111.07,204.80,2333.43,153.61
+"OCCIDENTAL MINDORO","Three persons",6408.68,270.76,4268.79,180.35
+"OCCIDENTAL MINDORO","Four persons",7714.40,278.83,5392.07,194.89
+"OCCIDENTAL MINDORO","Five persons",8002.79,310.39,5563.34,215.78
+"OCCIDENTAL MINDORO","Six persons",4564.67,282.91,3341.80,207.12
+"OCCIDENTAL MINDORO","Seven persons or more",4732.96,295.97,3508.44,219.40
+"ORIENTAL MINDORO","Total Family Size",58399.02,266.37,43476.87,198.30
+"ORIENTAL MINDORO","One person",2075.90,137.88,1522.38,101.11
+"ORIENTAL MINDORO","Two persons",9462.51,303.01,6561.17,210.10
+"ORIENTAL MINDORO","Three persons",11128.11,266.97,8347.43,200.26
+"ORIENTAL MINDORO","Four persons",13010.14,260.70,10008.26,200.55
+"ORIENTAL MINDORO","Five persons",9562.13,274.62,7188.48,206.45
+"ORIENTAL MINDORO","Six persons",6767.36,277.28,4954.73,203.01
+"ORIENTAL MINDORO","Seven persons or more",6392.87,288.65,4894.41,220.99
+"PALAWAN  (Excluding City of Puerto Princesa)","Total Family Size",60934.49,244.42,39237.59,157.39
+"PALAWAN  (Excluding City of Puerto Princesa)","One person",2803.21,166.70,1655.09,98.43
+"PALAWAN  (Excluding City of Puerto Princesa)","Two persons",12252.00,289.11,5904.04,139.32
+"PALAWAN  (Excluding City of Puerto Princesa)","Three persons",10308.87,225.22,7011.16,153.18
+"PALAWAN  (Excluding City of Puerto Princesa)","Four persons",11329.31,211.07,7844.59,146.15
+"PALAWAN  (Excluding City of Puerto Princesa)","Five persons",10568.00,273.00,7347.91,189.81
+"PALAWAN  (Excluding City of Puerto Princesa)","Six persons",6411.90,243.78,4652.67,176.89
+"PALAWAN  (Excluding City of Puerto Princesa)","Seven persons or more",7261.20,283.11,4822.13,188.01
+"..City of Puerto Princesa","Total Family Size",28838.32,354.52,19246.70,236.61
+"..City of Puerto Princesa","One person",889.49,178.25,623.06,124.85
+"..City of Puerto Princesa","Two persons",2660.07,265.97,1810.21,181.00
+"..City of Puerto Princesa","Three persons",5979.50,325.06,4016.43,218.34
+"..City of Puerto Princesa","Four persons",7235.93,388.92,4710.45,253.18
+"..City of Puerto Princesa","Five persons",4632.64,354.13,3266.89,249.73
+"..City of Puerto Princesa","Six persons",3636.43,412.73,2374.76,269.53
+"..City of Puerto Princesa","Seven persons or more",3804.26,509.99,2444.90,327.76
+"ROMBLON","Total Family Size",18705.10,239.59,15187.03,194.53
+"ROMBLON","One person",924.68,121.82,762.39,100.44
+"ROMBLON","Two persons",2026.12,173.65,1677.32,143.76
+"ROMBLON","Three persons",3346.45,233.24,2702.12,188.33
+"ROMBLON","Four persons",4093.23,248.75,3321.88,201.87
+"ROMBLON","Five persons",3366.29,295.75,2679.01,235.37
+"ROMBLON","Six persons",2482.33,287.67,1975.07,228.88
+"ROMBLON","Seven persons or more",2466.00,308.28,2069.23,258.68
+"REGION V - BICOL REGION","Total Family Size",394959.39,287.47,278383.88,202.62
+"REGION V - BICOL REGION","One person",10384.90,138.56,7590.95,101.29
+"REGION V - BICOL REGION","Two persons",31488.20,212.23,22730.61,153.21
+"REGION V - BICOL REGION","Three persons",56269.08,247.16,41325.96,181.52
+"REGION V - BICOL REGION","Four persons",90372.02,312.84,60586.71,209.73
+"REGION V - BICOL REGION","Five persons",75846.04,302.13,54549.08,217.29
+"REGION V - BICOL REGION","Six persons",52296.22,318.05,37483.40,227.96
+"REGION V - BICOL REGION","Seven persons or more",78302.92,358.23,54117.16,247.58
+"ALBAY","Total Family Size",90854.58,292.12,67067.55,215.64
+"ALBAY","One person",2270.98,129.91,1827.33,104.53
+"ALBAY","Two persons",6529.08,199.77,4949.68,151.45
+"ALBAY","Three persons",13047.02,247.01,10017.11,189.65
+"ALBAY","Four persons",18547.02,300.31,13417.19,217.25
+"ALBAY","Five persons",18921.94,309.03,14154.83,231.17
+"ALBAY","Six persons",13210.46,357.72,9650.55,261.32
+"ALBAY","Seven persons or more",18328.08,380.93,13050.86,271.25
+"CAMARINES NORTE","Total Family Size",43502.69,286.82,28873.67,190.37
+"CAMARINES NORTE","One person",1655.18,137.13,1151.72,95.42
+"CAMARINES NORTE","Two persons",3573.50,200.59,2443.82,137.18
+"CAMARINES NORTE","Three persons",5348.28,255.58,3951.27,188.82
+"CAMARINES NORTE","Four persons",8974.06,272.33,6379.20,193.58
+"CAMARINES NORTE","Five persons",6843.49,272.24,4869.00,193.69
+"CAMARINES NORTE","Six persons",5878.23,299.95,4129.60,210.72
+"CAMARINES NORTE","Seven persons or more",11229.96,484.68,5949.05,256.76
+"CAMARINES SUR","Total Family Size",145585.47,322.29,91363.08,202.25
+"CAMARINES SUR","One person",3077.83,169.31,2047.32,112.62
+"CAMARINES SUR","Two persons",10645.08,251.59,6857.49,162.07
+"CAMARINES SUR","Three persons",19051.23,258.37,12498.27,169.50
+"CAMARINES SUR","Four persons",38167.86,406.06,21198.03,225.52
+"CAMARINES SUR","Five persons",29107.87,338.29,18743.64,217.84
+"CAMARINES SUR","Six persons",17643.37,320.32,11617.43,210.91
+"CAMARINES SUR","Seven persons or more",27892.24,338.59,18400.90,223.37
+"CATANDUANES","Total Family Size",17194.94,282.19,14070.15,230.91
+"CATANDUANES","One person",546.17,162.21,383.08,113.77
+"CATANDUANES","Two persons",1468.10,210.09,1201.28,171.91
+"CATANDUANES","Three persons",2991.50,299.35,2287.51,228.91
+"CATANDUANES","Four persons",3732.38,288.26,3017.33,233.04
+"CATANDUANES","Five persons",3030.73,298.27,2512.59,247.28
+"CATANDUANES","Six persons",1674.79,258.20,1450.57,223.63
+"CATANDUANES","Seven persons or more",3751.26,341.31,3217.78,292.77
+"MASBATE","Total Family Size",52754.29,250.72,38720.57,184.02
+"MASBATE","One person",1517.43,124.61,1065.30,87.48
+"MASBATE","Two persons",4812.90,199.53,3512.93,145.64
+"MASBATE","Three persons",8956.67,237.80,6693.12,177.70
+"MASBATE","Four persons",11269.09,238.26,8400.53,177.61
+"MASBATE","Five persons",9566.80,271.82,7165.79,203.60
+"MASBATE","Six persons",7571.52,297.83,5273.72,207.44
+"MASBATE","Seven persons or more",9059.88,317.51,6609.19,231.63
+"SORSOGON","Total Family Size",45067.41,239.54,38288.86,203.51
+"SORSOGON","One person",1317.32,112.87,1116.20,95.64
+"SORSOGON","Two persons",4459.54,182.41,3765.41,154.02
+"SORSOGON","Three persons",6874.38,211.39,5878.68,180.77
+"SORSOGON","Four persons",9681.61,242.51,8174.42,204.76
+"SORSOGON","Five persons",8375.21,251.74,7103.23,213.51
+"SORSOGON","Six persons",6317.85,302.11,5361.54,256.38
+"SORSOGON","Seven persons or more",8041.50,316.62,6889.38,271.26
+"REGION VI - WESTERN VISAYAS","Total Family Size",387743.11,320.23,278175.09,229.74
+"REGION VI - WESTERN VISAYAS","One person",14145.39,144.22,10371.44,105.74
+"REGION VI - WESTERN VISAYAS","Two persons",39866.96,248.76,28547.55,178.13
+"REGION VI - WESTERN VISAYAS","Three persons",75012.60,311.86,52543.56,218.45
+"REGION VI - WESTERN VISAYAS","Four persons",87049.97,323.09,62504.89,231.99
+"REGION VI - WESTERN VISAYAS","Five persons",71515.67,364.23,51836.00,264.00
+"REGION VI - WESTERN VISAYAS","Six persons",42824.48,365.44,31314.20,267.22
+"REGION VI - WESTERN VISAYAS","Seven persons or more",57328.04,444.41,41057.45,318.28
+"AKLAN","Total Family Size",52940.29,329.01,39833.15,247.56
+"AKLAN","One person",2535.25,157.17,1904.42,118.06
+"AKLAN","Two persons",6065.36,270.39,4377.58,195.15
+"AKLAN","Three persons",8757.66,301.06,6507.28,223.70
+"AKLAN","Four persons",11523.53,348.56,8324.31,251.79
+"AKLAN","Five persons",8710.42,347.04,7067.54,281.59
+"AKLAN","Six persons",7595.67,400.10,5821.05,306.62
+"AKLAN","Seven persons or more",7752.41,481.21,5830.98,361.94
+"ANTIQUE","Total Family Size",46334.86,306.64,32695.97,216.38
+"ANTIQUE","One person",1866.63,138.68,1291.78,95.98
+"ANTIQUE","Two persons",4569.83,213.95,3356.91,157.16
+"ANTIQUE","Three persons",8979.41,312.09,6243.46,217.00
+"ANTIQUE","Four persons",10121.35,313.15,7016.50,217.09
+"ANTIQUE","Five persons",9026.12,351.41,6344.48,247.01
+"ANTIQUE","Six persons",5041.49,360.80,3702.08,264.94
+"ANTIQUE","Seven persons or more",6730.03,433.26,4740.76,305.20
+"CAPIZ","Total Family Size",58160.17,267.17,49041.18,225.28
+"CAPIZ","One person",2172.16,119.90,1894.27,104.56
+"CAPIZ","Two persons",6804.83,223.29,5739.93,188.35
+"CAPIZ","Three persons",12178.00,259.94,10008.48,213.63
+"CAPIZ","Four persons",13702.16,282.48,11502.23,237.13
+"CAPIZ","Five persons",10082.62,287.97,8713.88,248.88
+"CAPIZ","Six persons",6493.93,308.91,5601.71,266.47
+"CAPIZ","Seven persons or more",6726.48,379.95,5580.67,315.22
+"ILOILO (Excluding City of Iloilo)","Total Family Size",168660.15,317.32,114046.22,214.57
+"ILOILO (Excluding City of Iloilo)","One person",5219.19,131.07,3606.24,90.57
+"ILOILO (Excluding City of Iloilo)","Two persons",15480.20,227.29,10930.91,160.49
+"ILOILO (Excluding City of Iloilo)","Three persons",34043.00,320.89,21702.77,204.57
+"ILOILO (Excluding City of Iloilo)","Four persons",37508.34,311.20,25535.91,211.87
+"ILOILO (Excluding City of Iloilo)","Five persons",33120.23,384.57,22398.32,260.07
+"ILOILO (Excluding City of Iloilo)","Six persons",17373.13,347.81,12073.13,241.70
+"ILOILO (Excluding City of Iloilo)","Seven persons or more",25916.08,425.54,17798.95,292.26
+"..City of Iloilo","Total Family Size",48221.07,478.73,30888.59,306.65
+"..City of Iloilo","One person",1841.15,301.85,1207.77,198.01
+"..City of Iloilo","Two persons",5639.49,499.06,3079.04,272.48
+"..City of Iloilo","Three persons",8547.15,434.95,5926.85,301.61
+"..City of Iloilo","Four persons",10909.39,455.90,7248.23,302.90
+"..City of Iloilo","Five persons",8137.57,486.03,5134.25,306.65
+"..City of Iloilo","Six persons",5140.45,533.55,3074.28,319.09
+"..City of Iloilo","Seven persons or more",8005.88,598.77,5218.18,390.27
+"GUIMARAS","Total Family Size",13426.57,274.65,11669.98,238.72
+"GUIMARAS","One person",511.02,114.74,466.96,104.85
+"GUIMARAS","Two persons",1307.25,198.49,1063.18,161.43
+"GUIMARAS","Three persons",2507.39,248.73,2154.71,213.75
+"GUIMARAS","Four persons",3285.22,296.50,2877.71,259.73
+"GUIMARAS","Five persons",2438.71,317.31,2177.53,283.33
+"GUIMARAS","Six persons",1179.81,325.80,1041.97,287.73
+"GUIMARAS","Seven persons or more",2197.16,408.48,1887.92,350.99
+"NIR - NEGROS ISLAND REGION","Total Family Size",314461.45,266.29,240706.91,203.84
+"NIR - NEGROS ISLAND REGION","One person",15717.51,145.43,11781.04,109.01
+"NIR - NEGROS ISLAND REGION","Two persons",27225.55,193.80,21740.86,154.76
+"NIR - NEGROS ISLAND REGION","Three persons",55289.47,245.33,41756.17,185.28
+"NIR - NEGROS ISLAND REGION","Four persons",72752.29,282.00,55615.11,215.57
+"NIR - NEGROS ISLAND REGION","Five persons",58138.13,286.29,45657.20,224.83
+"NIR - NEGROS ISLAND REGION","Six persons",39067.04,324.12,29063.74,241.13
+"NIR - NEGROS ISLAND REGION","Seven persons or more",46271.47,369.11,35092.78,279.94
+"NEGROS OCCIDENTAL  (Excluding City of Bacolod)","Total Family Size",159884.00,241.78,133197.92,201.43
+"NEGROS OCCIDENTAL  (Excluding City of Bacolod)","One person",5855.08,115.52,5122.85,101.07
+"NEGROS OCCIDENTAL  (Excluding City of Bacolod)","Two persons",13145.94,178.04,11332.64,153.48
+"NEGROS OCCIDENTAL  (Excluding City of Bacolod)","Three persons",27429.62,216.95,22492.74,177.91
+"NEGROS OCCIDENTAL  (Excluding City of Bacolod)","Four persons",35301.05,251.97,29543.28,210.88
+"NEGROS OCCIDENTAL  (Excluding City of Bacolod)","Five persons",32143.72,260.60,27212.88,220.63
+"NEGROS OCCIDENTAL  (Excluding City of Bacolod)","Six persons",19914.14,290.37,16195.63,236.15
+"NEGROS OCCIDENTAL  (Excluding City of Bacolod)","Seven persons or more",26094.44,333.28,21297.91,272.02
+"..City of Bacolod","Total Family Size",53993.48,367.16,43060.38,292.81
+"..City of Bacolod","One person",1891.10,221.08,1470.32,171.89
+"..City of Bacolod","Two persons",4886.60,266.17,3853.72,209.91
+"..City of Bacolod","Three persons",9444.23,324.29,7771.75,266.86
+"..City of Bacolod","Four persons",12078.20,383.98,9611.54,305.56
+"..City of Bacolod","Five persons",10740.60,406.94,8567.71,324.61
+"..City of Bacolod","Six persons",7025.63,410.55,5578.47,325.98
+"..City of Bacolod","Seven persons or more",7927.12,493.58,6206.88,386.47
+"NEGROS ORIENTAL","Total Family Size",91615.23,263.80,58630.60,168.82
+"NEGROS ORIENTAL","One person",7348.68,161.41,4832.68,106.15
+"NEGROS ORIENTAL","Two persons",7985.64,179.68,5835.99,131.31
+"NEGROS ORIENTAL","Three persons",16920.85,259.71,10565.35,162.16
+"NEGROS ORIENTAL","Four persons",23535.05,288.86,15236.39,187.01
+"NEGROS ORIENTAL","Five persons",14050.33,278.38,9080.74,179.92
+"NEGROS ORIENTAL","Six persons",11131.81,347.33,6556.35,204.57
+"NEGROS ORIENTAL","Seven persons or more",10642.89,377.83,6523.10,231.57
+"SIQUIJOR","Total Family Size",8968.74,354.96,5818.00,230.26
+"SIQUIJOR","One person",622.64,188.27,355.19,107.40
+"SIQUIJOR","Two persons",1207.37,313.99,718.51,186.86
+"SIQUIJOR","Three persons",1494.77,320.73,926.34,198.76
+"SIQUIJOR","Four persons",1838.00,370.37,1223.90,246.63
+"SIQUIJOR","Five persons",1203.48,419.42,795.88,277.37
+"SIQUIJOR","Six persons",995.46,357.05,733.30,263.02
+"SIQUIJOR","Seven persons or more",1607.03,567.02,1064.88,375.73
+"REGION VII - CENTRAL VISAYAS","Total Family Size",549456.44,326.94,366428.72,218.03
+"REGION VII - CENTRAL VISAYAS","One person",17275.87,157.47,12208.55,111.28
+"REGION VII - CENTRAL VISAYAS","Two persons",53795.26,246.86,36633.98,168.11
+"REGION VII - CENTRAL VISAYAS","Three persons",90216.91,299.35,60903.56,202.08
+"REGION VII - CENTRAL VISAYAS","Four persons",130851.07,346.14,86763.53,229.52
+"REGION VII - CENTRAL VISAYAS","Five persons",99106.99,354.35,67049.28,239.73
+"REGION VII - CENTRAL VISAYAS","Six persons",64599.92,369.15,43246.67,247.13
+"REGION VII - CENTRAL VISAYAS","Seven persons or more",93610.42,427.63,59623.15,272.37
+"BOHOL","Total Family Size",97234.83,292.49,64244.59,193.25
+"BOHOL","One person",2554.15,116.48,1877.02,85.60
+"BOHOL","Two persons",8880.39,205.53,5804.50,134.34
+"BOHOL","Three persons",16372.31,285.70,10726.74,187.18
+"BOHOL","Four persons",22517.55,313.36,14414.53,200.60
+"BOHOL","Five persons",18322.52,326.98,12604.39,224.93
+"BOHOL","Six persons",11969.67,331.26,8047.36,222.71
+"BOHOL","Seven persons or more",16618.25,361.51,10770.04,234.29
+"CEBU (Excluding City of Cebu,  City of Lapu-Lapu, City of Mandaue)","Total Family Size",249098.22,293.38,164560.60,193.81
+"CEBU (Excluding City of Cebu,  City of Lapu-Lapu, City of Mandaue)","One person",9137.34,146.79,6172.45,99.16
+"CEBU (Excluding City of Cebu,  City of Lapu-Lapu, City of Mandaue)","Two persons",25923.44,221.13,17733.60,151.27
+"CEBU (Excluding City of Cebu,  City of Lapu-Lapu, City of Mandaue)","Three persons",40374.56,261.77,27092.69,175.66
+"CEBU (Excluding City of Cebu,  City of Lapu-Lapu, City of Mandaue)","Four persons",62707.68,330.24,40778.96,214.76
+"CEBU (Excluding City of Cebu,  City of Lapu-Lapu, City of Mandaue)","Five persons",45200.46,324.49,30061.09,215.81
+"CEBU (Excluding City of Cebu,  City of Lapu-Lapu, City of Mandaue)","Six persons",26158.37,326.43,17565.34,219.20
+"CEBU (Excluding City of Cebu,  City of Lapu-Lapu, City of Mandaue)","Seven persons or more",39596.37,373.43,25156.46,237.25
+"..City of Cebu","Total Family Size",94112.17,386.39,63359.62,260.13
+"..City of Cebu","One person",2381.72,222.29,1721.27,160.65
+"..City of Cebu","Two persons",7592.62,281.08,5408.57,200.23
+"..City of Cebu","Three persons",15873.02,369.81,10532.98,245.39
+"..City of Cebu","Four persons",20461.07,351.58,14040.43,241.25
+"..City of Cebu","Five persons",16429.04,389.09,11512.72,272.66
+"..City of Cebu","Six persons",12813.58,442.09,8280.07,285.67
+"..City of Cebu","Seven persons or more",18561.12,553.86,11863.59,354.01
+"..City of Lapu-Lapu","Total Family Size",56439.70,428.24,39238.98,297.73
+"..City of Lapu-Lapu","One person",1440.75,216.08,1134.29,170.12
+"..City of Lapu-Lapu","Two persons",5808.29,394.11,4016.54,272.54
+"..City of Lapu-Lapu","Three persons",8772.94,372.26,6227.30,264.24
+"..City of Lapu-Lapu","Four persons",13357.72,423.48,9426.78,298.86
+"..City of Lapu-Lapu","Five persons",9998.63,482.10,6789.87,327.38
+"..City of Lapu-Lapu","Six persons",7718.56,453.13,5424.76,318.47
+"..City of Lapu-Lapu","Seven persons or more",9342.80,533.63,6219.44,355.24
+"..City of Mandaue","Total Family Size",52571.52,424.81,35024.94,283.03
+"..City of Mandaue","One person",1761.92,216.21,1303.51,159.95
+"..City of Mandaue","Two persons",5590.52,355.53,3670.77,233.44
+"..City of Mandaue","Three persons",8824.08,377.99,6323.85,270.89
+"..City of Mandaue","Four persons",11807.04,444.79,8102.83,305.24
+"..City of Mandaue","Five persons",9156.34,427.95,6081.20,284.22
+"..City of Mandaue","Six persons",5939.74,467.30,3929.15,309.12
+"..City of Mandaue","Seven persons or more",9491.87,597.67,5613.62,353.47
+"REGION VIII - EASTERN VISAYAS","Total Family Size",316881.63,267.33,236960.62,199.91
+"REGION VIII - EASTERN VISAYAS","One person",10879.05,125.54,8418.77,97.15
+"REGION VIII - EASTERN VISAYAS","Two persons",30908.51,201.75,23052.35,150.47
+"REGION VIII - EASTERN VISAYAS","Three persons",50510.75,254.74,36800.74,185.60
+"REGION VIII - EASTERN VISAYAS","Four persons",65409.71,274.47,49294.98,206.85
+"REGION VIII - EASTERN VISAYAS","Five persons",57604.71,286.30,43388.30,215.64
+"REGION VIII - EASTERN VISAYAS","Six persons",45250.05,310.20,34070.84,233.56
+"REGION VIII - EASTERN VISAYAS","Seven persons or more",56318.85,348.03,41934.63,259.14
+"EASTERN SAMAR","Total Family Size",34088.99,250.69,26427.42,194.35
+"EASTERN SAMAR","One person",1009.76,103.49,853.24,87.45
+"EASTERN SAMAR","Two persons",3275.13,173.93,2522.47,133.96
+"EASTERN SAMAR","Three persons",5946.16,259.95,4451.14,194.59
+"EASTERN SAMAR","Four persons",7400.15,274.53,5570.69,206.66
+"EASTERN SAMAR","Five persons",5627.92,277.40,4392.95,216.53
+"EASTERN SAMAR","Six persons",4535.71,252.74,3800.91,211.79
+"EASTERN SAMAR","Seven persons or more",6294.15,325.64,4836.02,250.20
+"LEYTE (Excluding City of Tacloban)","Total Family Size",126750.23,249.97,99936.93,197.09
+"LEYTE (Excluding City of Tacloban)","One person",5111.52,119.28,4139.16,96.59
+"LEYTE (Excluding City of Tacloban)","Two persons",14001.06,191.57,10855.14,148.52
+"LEYTE (Excluding City of Tacloban)","Three persons",19499.56,230.20,15131.63,178.64
+"LEYTE (Excluding City of Tacloban)","Four persons",27946.70,263.22,22009.50,207.30
+"LEYTE (Excluding City of Tacloban)","Five persons",23655.75,270.29,18824.49,215.09
+"LEYTE (Excluding City of Tacloban)","Six persons",18191.32,315.32,14122.16,244.79
+"LEYTE (Excluding City of Tacloban)","Seven persons or more",18344.31,333.39,14854.86,269.97
+"..City of Tacloban","Total Family Size",24065.31,414.03,17292.93,297.52
+"..City of Tacloban","One person",750.48,223.01,584.74,173.76
+"..City of Tacloban","Two persons",2021.45,314.54,1451.43,225.84
+"..City of Tacloban","Three persons",4423.05,411.10,3120.34,290.02
+"..City of Tacloban","Four persons",4771.16,399.59,3463.45,290.07
+"..City of Tacloban","Five persons",4139.79,406.85,3064.18,301.14
+"..City of Tacloban","Six persons",3164.21,468.19,2288.95,338.68
+"..City of Tacloban","Seven persons or more",4795.17,551.21,3319.82,381.62
+"NORTHERN SAMAR","Total Family Size",42910.81,296.49,25733.69,177.81
+"NORTHERN SAMAR","One person",1187.12,168.31,705.00,99.95
+"NORTHERN SAMAR","Two persons",3318.15,237.81,1948.00,139.61
+"NORTHERN SAMAR","Three persons",5971.64,257.76,3531.31,152.43
+"NORTHERN SAMAR","Four persons",7176.05,290.64,4315.38,174.78
+"NORTHERN SAMAR","Five persons",7834.77,303.27,4785.80,185.25
+"NORTHERN SAMAR","Six persons",6965.79,344.94,4125.02,204.27
+"NORTHERN SAMAR","Seven persons or more",10457.28,350.48,6323.18,211.93
+"SAMAR","Total Family Size",45360.92,231.43,35121.37,179.19
+"SAMAR","One person",991.03,90.25,809.03,73.68
+"SAMAR","Two persons",3505.88,168.89,2736.98,131.85
+"SAMAR","Three persons",6828.74,223.35,5010.27,163.87
+"SAMAR","Four persons",9217.88,228.65,7283.57,180.67
+"SAMAR","Five persons",8302.41,247.52,6340.68,189.03
+"SAMAR","Six persons",6725.10,250.33,5331.34,198.45
+"SAMAR","Seven persons or more",9789.89,296.97,7609.49,230.83
+"SOUTHERN LEYTE","Total Family Size",29829.09,303.51,22651.62,230.48
+"SOUTHERN LEYTE","One person",1338.19,149.06,996.22,110.97
+"SOUTHERN LEYTE","Two persons",3578.06,244.22,2724.32,185.95
+"SOUTHERN LEYTE","Three persons",5416.13,301.28,3879.57,215.81
+"SOUTHERN LEYTE","Four persons",6182.62,310.75,4754.57,238.97
+"SOUTHERN LEYTE","Five persons",5395.18,337.89,4090.49,256.18
+"SOUTHERN LEYTE","Six persons",3537.37,333.60,2863.55,270.05
+"SOUTHERN LEYTE","Seven persons or more",4381.53,429.23,3342.91,327.48
+"BILIRAN","Total Family Size",13876.29,307.11,9796.66,216.82
+"BILIRAN","One person",490.94,133.74,331.38,90.27
+"BILIRAN","Two persons",1208.77,220.09,814.01,148.21
+"BILIRAN","Three persons",2425.48,295.00,1676.48,203.90
+"BILIRAN","Four persons",2715.15,325.32,1897.83,227.39
+"BILIRAN","Five persons",2648.88,336.29,1889.70,239.91
+"BILIRAN","Six persons",2130.56,366.37,1538.91,264.63
+"BILIRAN","Seven persons or more",2256.51,391.72,1648.36,286.14
+"REGION IX - ZAMBOANGA  PENINSULA","Total Family Size",230654.69,257.14,180240.20,200.93
+"REGION IX - ZAMBOANGA  PENINSULA","One person",5414.24,137.92,3964.16,100.98
+"REGION IX - ZAMBOANGA  PENINSULA","Two persons",18381.54,193.75,13835.27,145.83
+"REGION IX - ZAMBOANGA  PENINSULA","Three persons",37555.44,227.94,28510.39,173.04
+"REGION IX - ZAMBOANGA  PENINSULA","Four persons",52315.15,261.91,41074.93,205.63
+"REGION IX - ZAMBOANGA  PENINSULA","Five persons",43612.32,262.85,34971.49,210.77
+"REGION IX - ZAMBOANGA  PENINSULA","Six persons",32678.46,305.56,25778.56,241.04
+"REGION IX - ZAMBOANGA  PENINSULA","Seven persons or more",40697.52,324.26,32105.39,255.80
+"ZAMBOANGA DEL NORTE","Total Family Size",59611.72,237.56,46661.26,185.95
+"ZAMBOANGA DEL NORTE","One person",1553.94,132.86,1230.30,105.19
+"ZAMBOANGA DEL NORTE","Two persons",5459.75,184.72,4236.20,143.32
+"ZAMBOANGA DEL NORTE","Three persons",8574.15,213.53,6531.33,162.66
+"ZAMBOANGA DEL NORTE","Four persons",14686.52,247.55,11630.70,196.04
+"ZAMBOANGA DEL NORTE","Five persons",12145.80,245.50,9679.94,195.66
+"ZAMBOANGA DEL NORTE","Six persons",8055.18,296.54,6247.33,229.98
+"ZAMBOANGA DEL NORTE","Seven persons or more",9136.38,272.25,7105.46,211.73
+"ZAMBOANGA DEL SUR  (Excluding City of Zamboanga)","Total Family Size",53316.34,231.55,38077.71,165.37
+"ZAMBOANGA DEL SUR  (Excluding City of Zamboanga)","One person",2181.37,146.77,1409.58,94.84
+"ZAMBOANGA DEL SUR  (Excluding City of Zamboanga)","Two persons",3962.50,162.18,2731.03,111.78
+"ZAMBOANGA DEL SUR  (Excluding City of Zamboanga)","Three persons",9547.85,210.70,6264.42,138.24
+"ZAMBOANGA DEL SUR  (Excluding City of Zamboanga)","Four persons",12397.93,246.14,8813.00,174.97
+"ZAMBOANGA DEL SUR  (Excluding City of Zamboanga)","Five persons",8389.01,224.20,6461.48,172.68
+"ZAMBOANGA DEL SUR  (Excluding City of Zamboanga)","Six persons",7969.86,282.28,5862.54,207.64
+"ZAMBOANGA DEL SUR  (Excluding City of Zamboanga)","Seven persons or more",8867.83,299.33,6535.66,220.61
+"..City of Zamboanga","Total Family Size",64383.56,296.27,55249.61,254.24
+"..City of Zamboanga","One person",969.31,168.64,787.51,137.01
+"..City of Zamboanga","Two persons",5020.02,255.08,3984.03,202.44
+"..City of Zamboanga","Three persons",11087.92,256.11,9527.63,220.07
+"..City of Zamboanga","Four persons",14192.15,289.98,12214.91,249.58
+"..City of Zamboanga","Five persons",12773.53,300.35,11086.97,260.70
+"..City of Zamboanga","Six persons",8935.01,334.87,7733.36,289.83
+"..City of Zamboanga","Seven persons or more",11405.63,374.70,9915.21,325.74
+"ZAMBOANGA SIBUGAY","Total Family Size",44873.69,261.55,34210.00,199.40
+"ZAMBOANGA SIBUGAY","One person",548.65,89.72,435.72,71.25
+"ZAMBOANGA SIBUGAY","Two persons",3529.64,182.82,2585.85,133.94
+"ZAMBOANGA SIBUGAY","Three persons",7042.29,226.92,5232.77,168.61
+"ZAMBOANGA SIBUGAY","Four persons",9544.46,268.17,7302.90,205.19
+"ZAMBOANGA SIBUGAY","Five persons",9007.04,279.54,6787.00,210.64
+"ZAMBOANGA SIBUGAY","Six persons",6513.52,302.42,5056.36,234.76
+"ZAMBOANGA SIBUGAY","Seven persons or more",8688.10,337.24,6809.38,264.31
+"City of Isabela","Total Family Size",8469.36,314.30,6041.62,224.20
+"City of Isabela","One person",160.97,192.88,101.04,121.06
+"City of Isabela","Two persons",409.62,216.25,298.17,157.41
+"City of Isabela","Three persons",1303.23,262.37,954.24,192.11
+"City of Isabela","Four persons",1494.09,270.72,1113.42,201.74
+"City of Isabela","Five persons",1296.95,303.03,956.12,223.40
+"City of Isabela","Six persons",1204.90,361.93,878.97,264.03
+"City of Isabela","Seven persons or more",2599.59,424.57,1739.67,284.12
+"REGION X - NORTHERN  MINDANAO","Total Family Size",366374.02,296.50,250318.22,202.58
+"REGION X - NORTHERN  MINDANAO","One person",10646.68,158.76,7121.84,106.20
+"REGION X - NORTHERN  MINDANAO","Two persons",30764.02,223.63,21365.76,155.31
+"REGION X - NORTHERN  MINDANAO","Three persons",62166.23,277.50,42253.70,188.62
+"REGION X - NORTHERN  MINDANAO","Four persons",84521.00,296.16,58474.37,204.89
+"REGION X - NORTHERN  MINDANAO","Five persons",68128.24,307.53,46983.91,212.09
+"REGION X - NORTHERN  MINDANAO","Six persons",49976.13,347.90,33349.94,232.16
+"REGION X - NORTHERN  MINDANAO","Seven persons or more",60171.73,384.62,40768.70,260.59
+"BUKIDNON","Total Family Size",92530.01,254.87,54113.81,149.05
+"BUKIDNON","One person",3408.86,152.02,1887.23,84.16
+"BUKIDNON","Two persons",7508.03,196.87,4225.52,110.80
+"BUKIDNON","Three persons",17119.82,241.36,9782.06,137.91
+"BUKIDNON","Four persons",20219.82,236.35,12453.51,145.57
+"BUKIDNON","Five persons",17681.15,275.16,10569.85,164.49
+"BUKIDNON","Six persons",13138.93,323.35,7283.58,179.25
+"BUKIDNON","Seven persons or more",13453.41,327.23,7912.07,192.45
+"CAMIGUIN","Total Family Size",7451.23,324.40,5169.83,225.08
+"CAMIGUIN","One person",444.33,236.74,286.35,152.57
+"CAMIGUIN","Two persons",722.71,228.84,537.16,170.09
+"CAMIGUIN","Three persons",1195.47,285.19,819.92,195.60
+"CAMIGUIN","Four persons",1590.51,352.93,1124.38,249.49
+"CAMIGUIN","Five persons",1400.58,357.87,911.73,232.96
+"CAMIGUIN","Six persons",1025.18,401.56,711.65,278.75
+"CAMIGUIN","Seven persons or more",1072.44,387.31,778.64,281.21
+"LANAO DEL NORTE (Excluding City of Iligan)","Total Family Size",42500.90,253.75,30848.20,184.18
+"LANAO DEL NORTE (Excluding City of Iligan)","One person",827.65,128.23,587.47,91.02
+"LANAO DEL NORTE (Excluding City of Iligan)","Two persons",2867.33,166.33,2182.03,126.58
+"LANAO DEL NORTE (Excluding City of Iligan)","Three persons",6651.66,236.47,4868.85,173.09
+"LANAO DEL NORTE (Excluding City of Iligan)","Four persons",8734.48,236.12,6554.71,177.19
+"LANAO DEL NORTE (Excluding City of Iligan)","Five persons",7490.45,241.17,5832.39,187.78
+"LANAO DEL NORTE (Excluding City of Iligan)","Six persons",6676.61,322.90,4468.80,216.13
+"LANAO DEL NORTE (Excluding City of Iligan)","Seven persons or more",9252.72,343.46,6353.96,235.86
+"..City of Iligan","Total Family Size",34520.13,385.26,23660.49,264.06
+"..City of Iligan","One person",774.93,195.27,523.22,131.84
+"..City of Iligan","Two persons",2761.28,277.50,1984.87,199.47
+"..City of Iligan","Three persons",5417.92,353.33,3810.25,248.48
+"..City of Iligan","Four persons",6815.73,352.12,4756.81,245.75
+"..City of Iligan","Five persons",6829.23,443.56,4438.82,288.30
+"..City of Iligan","Six persons",4482.45,402.65,3159.48,283.81
+"..City of Iligan","Seven persons or more",7438.58,514.26,4987.05,344.78
+"MISAMIS OCCIDENTAL","Total Family Size",41680.63,282.33,35931.04,243.39
+"MISAMIS OCCIDENTAL","One person",1256.40,114.16,1094.76,99.48
+"MISAMIS OCCIDENTAL","Two persons",4162.71,203.46,3544.13,173.22
+"MISAMIS OCCIDENTAL","Three persons",7082.39,288.91,6060.73,247.23
+"MISAMIS OCCIDENTAL","Four persons",9935.22,306.99,8595.57,265.60
+"MISAMIS OCCIDENTAL","Five persons",7666.14,298.39,6654.08,259.00
+"MISAMIS OCCIDENTAL","Six persons",5047.94,308.98,4476.64,274.01
+"MISAMIS OCCIDENTAL","Seven persons or more",6529.84,378.39,5505.13,319.01
+"MISAMIS ORIENTAL (Excluding City of Cagayan de Oro)","Total Family Size",68407.76,285.00,46424.49,193.42
+"MISAMIS ORIENTAL (Excluding City of Cagayan de Oro)","One person",1991.00,154.06,1358.87,105.15
+"MISAMIS ORIENTAL (Excluding City of Cagayan de Oro)","Two persons",5935.09,223.74,4039.25,152.27
+"MISAMIS ORIENTAL (Excluding City of Cagayan de Oro)","Three persons",11011.69,253.77,7444.84,171.57
+"MISAMIS ORIENTAL (Excluding City of Cagayan de Oro)","Four persons",16599.07,295.10,11199.73,199.11
+"MISAMIS ORIENTAL (Excluding City of Cagayan de Oro)","Five persons",12417.50,299.59,8505.51,205.21
+"MISAMIS ORIENTAL (Excluding City of Cagayan de Oro)","Six persons",9427.66,334.32,6406.10,227.17
+"MISAMIS ORIENTAL (Excluding City of Cagayan de Oro)","Seven persons or more",11025.75,352.43,7470.19,238.78
+"..City of Cagayan de Oro","Total Family Size",79283.36,386.93,54170.34,264.37
+"..City of Cagayan de Oro","One person",1943.50,231.15,1383.93,164.60
+"..City of Cagayan de Oro","Two persons",6806.86,308.03,4852.80,219.60
+"..City of Cagayan de Oro","Three persons",13687.29,364.74,9467.04,252.28
+"..City of Cagayan de Oro","Four persons",20626.16,409.47,13789.67,273.75
+"..City of Cagayan de Oro","Five persons",14643.20,368.26,10071.53,253.29
+"..City of Cagayan de Oro","Six persons",10177.35,421.96,6843.69,283.75
+"..City of Cagayan de Oro","Seven persons or more",11399.00,503.99,7761.67,343.17
+"REGION XI - DAVAO REGION","Total Family Size",468674.28,318.95,300246.10,204.33
+"REGION XI - DAVAO REGION","One person",14281.48,164.56,9698.25,111.75
+"REGION XI - DAVAO REGION","Two persons",45131.14,245.96,28808.25,157.00
+"REGION XI - DAVAO REGION","Three persons",84564.94,287.65,55864.58,190.03
+"REGION XI - DAVAO REGION","Four persons",105976.94,312.30,69480.02,204.75
+"REGION XI - DAVAO REGION","Five persons",99501.90,402.46,59388.99,240.21
+"REGION XI - DAVAO REGION","Six persons",55627.87,349.69,36558.37,229.82
+"REGION XI - DAVAO REGION","Seven persons or more",63590.01,398.67,40447.64,253.58
+"DAVAO DEL NORTE","Total Family Size",68967.05,264.91,57132.86,219.45
+"DAVAO DEL NORTE","One person",2852.43,135.99,2392.83,114.08
+"DAVAO DEL NORTE","Two persons",8366.46,247.67,6401.09,189.49
+"DAVAO DEL NORTE","Three persons",14076.67,246.26,12011.18,210.13
+"DAVAO DEL NORTE","Four persons",17337.96,282.34,14097.07,229.57
+"DAVAO DEL NORTE","Five persons",11388.07,284.62,9654.01,241.28
+"DAVAO DEL NORTE","Six persons",7179.64,289.49,6157.00,248.25
+"DAVAO DEL NORTE","Seven persons or more",7765.81,349.66,6419.67,289.05
+"DAVAO DEL SUR  (Excluding City of Davao)","Total Family Size",61206.66,292.43,39081.79,186.72
+"DAVAO DEL SUR  (Excluding City of Davao)","One person",2151.36,146.34,1572.93,106.99
+"DAVAO DEL SUR  (Excluding City of Davao)","Two persons",5560.65,221.44,3346.84,133.28
+"DAVAO DEL SUR  (Excluding City of Davao)","Three persons",14435.29,311.17,8939.07,192.69
+"DAVAO DEL SUR  (Excluding City of Davao)","Four persons",13037.38,274.32,8574.51,180.42
+"DAVAO DEL SUR  (Excluding City of Davao)","Five persons",11478.54,322.41,7512.09,211.00
+"DAVAO DEL SUR  (Excluding City of Davao)","Six persons",6856.42,320.20,4467.06,208.62
+"DAVAO DEL SUR  (Excluding City of Davao)","Seven persons or more",7687.02,414.12,4669.29,251.54
+"..City of Davao","Total Family Size",232983.06,412.91,134552.91,238.47
+"..City of Davao","One person",6413.87,220.02,3997.71,137.14
+"..City of Davao","Two persons",21175.24,291.14,12764.42,175.50
+"..City of Davao","Three persons",36982.26,343.59,22459.32,208.66
+"..City of Davao","Four persons",51071.48,401.13,30456.31,239.21
+"..City of Davao","Five persons",55875.79,605.03,28406.65,307.59
+"..City of Davao","Six persons",27849.58,430.91,16969.20,262.56
+"..City of Davao","Seven persons or more",33614.84,477.33,19499.31,276.89
+"DAVAO ORIENTAL","Total Family Size",33614.45,217.75,24348.25,157.72
+"DAVAO ORIENTAL","One person",710.24,95.75,533.62,71.94
+"DAVAO ORIENTAL","Two persons",2985.73,171.18,2072.75,118.84
+"DAVAO ORIENTAL","Three persons",5779.23,204.97,4012.31,142.30
+"DAVAO ORIENTAL","Four persons",7395.89,208.28,5362.13,151.00
+"DAVAO ORIENTAL","Five persons",6373.28,242.55,4667.50,177.63
+"DAVAO ORIENTAL","Six persons",3858.64,235.55,2880.92,175.86
+"DAVAO ORIENTAL","Seven persons or more",6511.44,281.26,4819.01,208.16
+"DAVAO DE ORO","Total Family Size",54227.12,277.72,32208.53,164.95
+"DAVAO DE ORO","One person",1582.70,153.32,782.93,75.84
+"DAVAO DE ORO","Two persons",5324.92,231.58,2984.71,129.80
+"DAVAO DE ORO","Three persons",9948.64,264.56,6023.55,160.18
+"DAVAO DE ORO","Four persons",12818.54,274.26,7725.98,165.30
+"DAVAO DE ORO","Five persons",10767.47,289.37,6510.44,174.96
+"DAVAO DE ORO","Six persons",7697.10,335.76,4548.31,198.40
+"DAVAO DE ORO","Seven persons or more",6087.74,348.62,3632.60,208.03
+"DAVAO OCCIDENTAL","Total Family Size",17675.94,205.80,12921.76,150.45
+"DAVAO OCCIDENTAL","One person",570.87,135.33,418.22,99.14
+"DAVAO OCCIDENTAL","Two persons",1718.14,150.37,1238.45,108.39
+"DAVAO OCCIDENTAL","Three persons",3342.84,196.66,2419.14,142.32
+"DAVAO OCCIDENTAL","Four persons",4315.69,207.08,3264.02,156.61
+"DAVAO OCCIDENTAL","Five persons",3618.74,229.28,2638.31,167.16
+"DAVAO OCCIDENTAL","Six persons",2186.49,244.93,1535.87,172.05
+"DAVAO OCCIDENTAL","Seven persons or more",1923.17,249.89,1407.76,182.92
+"REGION XII - SOCCSKSARGEN2/","Total Family Size",321421.30,282.44,230268.47,202.34
+"REGION XII - SOCCSKSARGEN2/","One person",10087.33,132.96,7401.38,97.55
+"REGION XII - SOCCSKSARGEN2/","Two persons",40473.58,314.56,21268.98,165.30
+"REGION XII - SOCCSKSARGEN2/","Three persons",57190.79,255.62,43862.83,196.05
+"REGION XII - SOCCSKSARGEN2/","Four persons",72708.70,283.33,53515.14,208.54
+"REGION XII - SOCCSKSARGEN2/","Five persons",60600.33,301.47,44138.12,219.57
+"REGION XII - SOCCSKSARGEN2/","Six persons",39514.27,304.72,29404.98,226.76
+"REGION XII - SOCCSKSARGEN2/","Seven persons or more",40846.29,333.57,30677.03,250.52
+"COTABATO","Total Family Size",107152.02,308.53,73910.76,212.82
+"COTABATO","One person",2939.31,145.79,1865.45,92.53
+"COTABATO","Two persons",8527.79,246.46,5752.36,166.25
+"COTABATO","Three persons",19443.50,292.64,14648.63,220.47
+"COTABATO","Four persons",25614.44,324.79,17152.23,217.49
+"COTABATO","Five persons",22006.33,352.56,14404.63,230.77
+"COTABATO","Six persons",13846.06,329.37,9590.02,228.12
+"COTABATO","Seven persons or more",14774.59,345.46,10497.44,245.45
+"SOUTH COTABATO  (Excluding City of General Santos)","Total Family Size",67832.69,251.85,53683.65,199.32
+"SOUTH COTABATO  (Excluding City of General Santos)","One person",3519.25,131.61,2752.44,102.94
+"SOUTH COTABATO  (Excluding City of General Santos)","Two persons",7236.84,203.01,5654.46,158.62
+"SOUTH COTABATO  (Excluding City of General Santos)","Three persons",11564.36,227.57,9239.87,181.83
+"SOUTH COTABATO  (Excluding City of General Santos)","Four persons",16618.54,267.92,13054.89,210.47
+"SOUTH COTABATO  (Excluding City of General Santos)","Five persons",13318.30,292.03,10395.43,227.94
+"SOUTH COTABATO  (Excluding City of General Santos)","Six persons",8125.22,286.21,6526.22,229.89
+"SOUTH COTABATO  (Excluding City of General Santos)","Seven persons or more",7450.19,370.57,6060.33,301.44
+" City of General Santos","Total Family Size",57357.38,331.82,42106.89,243.59
+" City of General Santos","One person",1721.64,147.11,1303.40,111.37
+" City of General Santos","Two persons",6209.33,278.68,4340.22,194.79
+" City of General Santos","Three persons",12106.23,332.49,8849.21,243.04
+" City of General Santos","Four persons",12226.56,338.70,8943.48,247.75
+" City of General Santos","Five persons",9789.85,368.75,7487.59,282.03
+" City of General Santos","Six persons",7637.87,371.42,5619.29,273.26
+" City of General Santos","Seven persons or more",7665.89,398.19,5563.70,289.00
+"SULTAN KUDARAT","Total Family Size",59001.84,293.83,36586.14,182.20
+"SULTAN KUDARAT","One person",1243.73,112.92,946.86,85.97
+"SULTAN KUDARAT","Two persons",16406.24,770.00,3841.63,180.30
+"SULTAN KUDARAT","Three persons",8827.98,215.00,6900.77,168.06
+"SULTAN KUDARAT","Four persons",10934.52,243.60,8511.29,189.61
+"SULTAN KUDARAT","Five persons",9312.79,237.47,7026.92,179.18
+"SULTAN KUDARAT","Six persons",5624.63,276.24,4227.08,207.60
+"SULTAN KUDARAT","Seven persons or more",6651.95,289.78,5131.60,223.55
+"SARANGANI","Total Family Size",30077.37,203.58,23981.03,162.31
+"SARANGANI","One person",663.40,106.12,533.24,85.30
+"SARANGANI","Two persons",2093.38,141.14,1680.31,113.29
+"SARANGANI","Three persons",5248.73,181.00,4224.36,145.68
+"SARANGANI","Four persons",7314.63,210.54,5853.25,168.48
+"SARANGANI","Five persons",6173.07,226.72,4823.56,177.16
+"SARANGANI","Six persons",4280.49,233.66,3442.37,187.91
+"SARANGANI","Seven persons or more",4303.66,247.71,3423.96,197.08
+"CARAGA","Total Family Size",191966.18,276.57,147924.17,213.12
+"CARAGA","One person",5201.18,134.65,4251.36,110.06
+"CARAGA","Two persons",18857.14,216.50,14223.00,163.29
+"CARAGA","Three persons",29238.00,245.40,22891.85,192.14
+"CARAGA","Four persons",40329.82,277.58,31581.63,217.37
+"CARAGA","Five persons",35471.16,288.67,27668.93,225.18
+"CARAGA","Six persons",26659.07,333.92,19563.53,245.04
+"CARAGA","Seven persons or more",36209.81,357.75,27743.88,274.11
+"AGUSAN DEL NORTE  (Excluding City of Butuan)","Total Family Size",23483.83,247.80,19890.87,209.88
+"AGUSAN DEL NORTE  (Excluding City of Butuan)","One person",463.92,122.43,413.58,109.14
+"AGUSAN DEL NORTE  (Excluding City of Butuan)","Two persons",2225.75,179.17,1892.00,152.30
+"AGUSAN DEL NORTE  (Excluding City of Butuan)","Three persons",3708.03,234.08,3160.11,199.49
+"AGUSAN DEL NORTE  (Excluding City of Butuan)","Four persons",5148.06,247.38,4247.67,204.11
+"AGUSAN DEL NORTE  (Excluding City of Butuan)","Five persons",4944.85,262.11,4204.84,222.89
+"AGUSAN DEL NORTE  (Excluding City of Butuan)","Six persons",3055.59,301.25,2614.89,257.80
+"AGUSAN DEL NORTE  (Excluding City of Butuan)","Seven persons or more",3937.63,305.25,3357.78,260.30
+"City of Butuan","Total Family Size",35478.32,378.89,26530.54,283.33
+"City of Butuan","One person",991.20,193.63,753.59,147.21
+"City of Butuan","Two persons",3449.32,335.54,2462.40,239.54
+"City of Butuan","Three persons",5227.71,351.21,3965.37,266.40
+"City of Butuan","Four persons",7415.40,364.15,5635.31,276.73
+"City of Butuan","Five persons",6968.78,437.22,5084.58,319.01
+"City of Butuan","Six persons",5145.88,456.03,3699.64,327.86
+"City of Butuan","Seven persons or more",6280.03,398.29,4929.66,312.65
+"AGUSAN DEL SUR","Total Family Size",41342.13,224.15,36547.57,198.15
+"AGUSAN DEL SUR","One person",1570.01,137.17,1398.33,122.17
+"AGUSAN DEL SUR","Two persons",3779.11,162.50,3315.31,142.56
+"AGUSAN DEL SUR","Three persons",6077.12,190.48,5374.79,168.47
+"AGUSAN DEL SUR","Four persons",8787.28,237.35,7850.87,212.05
+"AGUSAN DEL SUR","Five persons",7554.01,227.96,6826.87,206.02
+"AGUSAN DEL SUR","Six persons",5091.92,266.77,4326.40,226.67
+"AGUSAN DEL SUR","Seven persons or more",8482.67,296.73,7455.00,260.78
+"SURIGAO DEL NORTE","Total Family Size",45493.96,333.69,28490.54,208.97
+"SURIGAO DEL NORTE","One person",966.14,131.79,654.42,89.27
+"SURIGAO DEL NORTE","Two persons",4217.67,241.38,2779.26,159.06
+"SURIGAO DEL NORTE","Three persons",6717.88,285.72,4487.48,190.86
+"SURIGAO DEL NORTE","Four persons",9209.87,311.77,6060.51,205.16
+"SURIGAO DEL NORTE","Five persons",8020.29,353.51,5127.79,226.02
+"SURIGAO DEL NORTE","Six persons",7083.52,419.08,3966.65,234.68
+"SURIGAO DEL NORTE","Seven persons or more",9278.60,491.25,5414.43,286.66
+"SURIGAO DEL SUR","Total Family Size",38019.31,247.80,31093.45,202.66
+"SURIGAO DEL SUR","One person",1045.49,115.64,918.64,101.61
+"SURIGAO DEL SUR","Two persons",4484.07,227.17,3318.95,168.15
+"SURIGAO DEL SUR","Three persons",6380.75,227.24,5086.90,181.16
+"SURIGAO DEL SUR","Four persons",7959.68,259.29,6613.76,215.45
+"SURIGAO DEL SUR","Five persons",6135.16,235.67,5252.90,201.78
+"SURIGAO DEL SUR","Six persons",5149.66,275.24,4213.49,225.21
+"SURIGAO DEL SUR","Seven persons or more",6864.49,324.90,5688.80,269.25
+"DINAGAT ISLANDS","Total Family Size",8148.63,258.84,5371.21,170.62
+"DINAGAT ISLANDS","One person",164.43,86.45,112.80,59.30
+"DINAGAT ISLANDS","Two persons",701.21,178.39,455.08,115.77
+"DINAGAT ISLANDS","Three persons",1126.51,228.86,817.20,166.02
+"DINAGAT ISLANDS","Four persons",1809.52,263.93,1173.51,171.16
+"DINAGAT ISLANDS","Five persons",1848.06,297.34,1171.95,188.56
+"DINAGAT ISLANDS","Six persons",1132.50,305.20,742.46,200.09
+"DINAGAT ISLANDS","Seven persons or more",1366.40,346.47,898.21,227.75
+"BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO3/","Total Family Size",173184.82,206.88,141398.46,168.91
+"BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO3/","One person",2432.13,139.80,1775.09,102.03
+"BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO3/","Two persons",11690.67,163.58,9154.45,128.09
+"BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO3/","Three persons",28216.00,177.93,22752.90,143.48
+"BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO3/","Four persons",34265.23,192.01,28234.63,158.22
+"BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO3/","Five persons",31611.44,212.98,25523.10,171.96
+"BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO3/","Six persons",24475.17,226.41,20353.74,188.28
+"BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO3/","Seven persons or more",40494.19,261.77,33604.55,217.23
+"BASILAN","Total Family Size",13790.29,197.82,10806.99,155.02
+"BASILAN","One person",203.23,116.59,146.65,84.13
+"BASILAN","Two persons",805.53,149.83,602.50,112.07
+"BASILAN","Three persons",1701.24,164.75,1299.13,125.81
+"BASILAN","Four persons",2382.31,185.07,1863.82,144.79
+"BASILAN","Five persons",2424.80,203.96,1861.22,156.55
+"BASILAN","Six persons",2183.71,212.52,1735.20,168.87
+"BASILAN","Seven persons or more",4089.46,237.33,3298.47,191.43
+"LANAO DEL SUR","Total Family Size",47807.66,257.47,40314.17,217.11
+"LANAO DEL SUR","One person",518.07,147.62,380.33,108.37
+"LANAO DEL SUR","Two persons",1986.09,168.35,1646.59,139.57
+"LANAO DEL SUR","Three persons",5911.69,197.86,4877.18,163.23
+"LANAO DEL SUR","Four persons",7731.13,231.60,6433.06,192.72
+"LANAO DEL SUR","Five persons",8745.23,260.59,7252.16,216.10
+"LANAO DEL SUR","Six persons",7495.72,271.72,6478.40,234.84
+"LANAO DEL SUR","Seven persons or more",15419.73,335.43,13246.45,288.15
+"MAGUINDANAO","Total Family Size",36451.63,156.02,35382.66,151.45
+"MAGUINDANAO","One person",289.80,97.30,293.69,98.61
+"MAGUINDANAO","Two persons",2933.59,130.48,2805.94,124.80
+"MAGUINDANAO","Three persons",7056.16,142.39,6854.74,138.33
+"MAGUINDANAO","Four persons",8632.91,152.15,8432.65,148.62
+"MAGUINDANAO","Five persons",6158.45,159.97,6006.49,156.02
+"MAGUINDANAO","Six persons",4950.32,174.01,4785.72,168.22
+"MAGUINDANAO","Seven persons or more",6430.40,184.10,6203.43,177.60
+"Maguindanao del Sur1/","Total Family Size",18658.12,150.80,18247.02,147.48
+"Maguindanao del Sur1/","One person",129.95,98.01,135.62,102.28
+"Maguindanao del Sur1/","Two persons",1327.70,124.73,1265.75,118.91
+"Maguindanao del Sur1/","Three persons",3592.87,140.54,3480.60,136.14
+"Maguindanao del Sur1/","Four persons",4470.77,143.37,4438.83,142.35
+"Maguindanao del Sur1/","Five persons",3190.57,152.13,3157.09,150.53
+"Maguindanao del Sur1/","Six persons",2647.36,167.55,2567.66,162.50
+"Maguindanao del Sur1/","Seven persons or more",3298.91,180.95,3201.47,175.61
+"Maguindanao del Norte1/","Total Family Size",17793.51,161.89,17135.64,155.91
+"Maguindanao del Norte1/","One person",159.85,96.73,158.07,95.65
+"Maguindanao del Norte1/","Two persons",1605.89,135.65,1540.18,130.10
+"Maguindanao del Norte1/","Three persons",3463.29,144.37,3374.14,140.66
+"Maguindanao del Norte1/","Four persons",4162.14,162.85,3993.82,156.27
+"Maguindanao del Norte1/","Five persons",2967.88,169.35,2849.40,162.59
+"Maguindanao del Norte1/","Six persons",2302.96,182.08,2218.06,175.37
+"Maguindanao del Norte1/","Seven persons or more",3131.49,187.53,3001.96,179.78
+"SULU","Total Family Size",36628.15,228.09,25684.03,159.94
+"SULU","One person",515.27,172.76,303.39,101.72
+"SULU","Two persons",2729.17,192.50,1873.07,132.12
+"SULU","Three persons",6957.45,210.61,4693.99,142.09
+"SULU","Four persons",7430.48,212.79,5318.35,152.30
+"SULU","Five persons",6681.06,236.50,4764.55,168.66
+"SULU","Six persons",4776.36,250.31,3367.91,176.50
+"SULU","Seven persons or more",7538.35,267.89,5362.77,190.58
+"TAWI-TAWI","Total Family Size",13812.02,190.00,8917.56,122.67
+"TAWI-TAWI","One person",167.31,123.04,109.98,80.88
+"TAWI-TAWI","Two persons",747.62,184.02,415.80,102.35
+"TAWI-TAWI","Three persons",2402.29,178.01,1499.85,111.14
+"TAWI-TAWI","Four persons",3232.62,180.64,2102.39,117.48
+"TAWI-TAWI","Five persons",3209.59,195.84,2068.62,126.22
+"TAWI-TAWI","Six persons",1606.44,191.02,1123.79,133.63
+"TAWI-TAWI","Seven persons or more",2446.15,220.74,1597.13,144.12
+"CITY OF COTABATO","Total Family Size",14353.22,232.51,13286.80,215.23
+"CITY OF COTABATO","One person",415.85,176.26,375.98,159.36
+"CITY OF COTABATO","Two persons",1221.26,209.41,1083.00,185.71
+"CITY OF COTABATO","Three persons",2602.55,203.67,2493.05,195.10
+"CITY OF COTABATO","Four persons",3242.03,228.30,3013.94,212.24
+"CITY OF COTABATO","Five persons",2144.22,222.85,2059.88,214.08
+"CITY OF COTABATO","Six persons",1821.26,243.84,1700.87,227.73
+"CITY OF COTABATO","Seven persons or more",2906.06,306.84,2560.08,270.31
