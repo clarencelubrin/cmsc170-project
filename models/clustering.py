@@ -45,6 +45,7 @@ def k_means_clustering(region_stats: dict, k: int, centroids=[]) -> dict:
 
   if len(centroids) == 0:     # Get a random value of centroids
     centroids = random.sample(list(region_stats.values()), k)
+  centroids = [list(c) for c in centroids]
 
   print("Initial Centroids")
   initial_centroids = [c.copy() for c in centroids] # Initialize the initial centroids
