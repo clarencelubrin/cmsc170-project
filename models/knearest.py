@@ -25,7 +25,7 @@ def prepareData(data_set_dir, clusters):
     labelList = []
 
     for region in regions:
-        featuresList.append(copied_region_stats[region])
+        featuresList.append(scaled_data[region])
         labelList.append(categories[region])
 
     return regions, featuresList, labelList
