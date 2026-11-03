@@ -21,6 +21,7 @@ def prepareData(data_set_dir, clusters):
         region_stats[regions[i]] = row
 
     scaled_data = standardize(region_stats)
+    random.seed(1) #for reproducibility
     categories = k_means_clustering(scaled_data, clusters)
 
     featuresList = []
@@ -73,6 +74,7 @@ def outputMatrix(testingList, trainingList, k, p):
 def kFoldSplit(num_regions, folds):
     #shuffle the positions of the regions
     positions = list(range(num_regions))
+    random.seed(1) #for reproducibility
     random.shuffle(positions)
 
     foldList = []
