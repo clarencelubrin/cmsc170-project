@@ -1,7 +1,9 @@
 import random
 from methods.read_data import createMatrix
 from models.clustering import k_means_clustering, standardize
+from methods.normalize_data import coalesceData, standardizeData
 from pathlib import Path
+from copy import deepcopy
 
 def getDatasetDir():
     PROJECT_DIR = Path(__file__).resolve().parent.parent
@@ -9,25 +11,20 @@ def getDatasetDir():
 
 def prepareData(data_set_dir, clusters):
     regions, fields, matrix = createMatrix(Path(data_set_dir))
-    region_stats = {}
 
-    for i in range(len(regions)):
-        row = []
-        for value in matrix[i]:
-            if value is None:
-                row.append(0)
-            else:
-                row.append(value)
-        region_stats[regions[i]] = row
+    # Coalesce NA values to 0 for clustering, then standardize it.
+    cleaned_data = standardizeData(coalesceData(matrix))
+    # Create dictionary of region statistics with region id as key and list of features as value
+    region_stats = {regions[i]: cleaned_data[i] for i in range(len(regions))}
 
-    scaled_data = standardize(region_stats)
-    categories = k_means_clustering(scaled_data, clusters)
+    copied_region_stats = deepcopy(region_stats)
+    categories = k_means_clustering(copied_region_stats, clusters)
 
     featuresList = []
     labelList = []
 
     for region in regions:
-        featuresList.append(scaled_data[region])
+        featuresList.append(copied_region_stats[region])
         labelList.append(categories[region])
 
     return regions, featuresList, labelList
