@@ -44,7 +44,10 @@ def k_means_clustering(region_stats: dict, k: int, centroids=[]) -> dict:
   e = 0                       # Minimum error for detecting if it still is converging
 
   if len(centroids) == 0:     # Get a random value of centroids
-    centroids = random.sample(list(region_stats.values()), k)
+    centroids = random.sample(list(region_stats.values()), k) # Bug: leads to a propagated error because random.sample creates a new outer list but references the inner list. 
+                                                              # This means that the original region_stats gets continuously modified and this can be seen when u repeat runs
+                                                              # and get centroids that have 0 as their values.
+  centroids = [list(c) for c in centroids] # Fix: no matter if it's the initial or previous centroid, just create a new object that copies the inner list.
 
   print("Initial Centroids")
   initial_centroids = [c.copy() for c in centroids] # Initialize the initial centroids

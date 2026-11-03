@@ -234,8 +234,8 @@ def createMatrix(folder_path):
     table, field_names = read_files(folder_path)
     return build_matrix(table, field_names)
 
-# current_dir_parent = Path(__file__).resolve().parent.parent
-# data_set_dir = current_dir_parent / "PROJECT_DATASET"
+current_dir_parent = Path(__file__).resolve().parent.parent
+data_set_dir = current_dir_parent / "PROJECT_DATASET"
 
-# regions, fields, matrix = createMatrix(data_set_dir)
-# printMatrix(regions, fields, matrix, max_regions=18, max_fields=20)
+regions, fields, matrix = createMatrix(data_set_dir)
+printMatrix(regions, fields, matrix, max_regions=18, max_fields=20)
