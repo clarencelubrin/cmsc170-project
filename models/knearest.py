@@ -3,13 +3,43 @@ from methods.read_data import createMatrix
 from models.clustering import k_means_clustering, standardize
 from methods.normalize_data import coalesceData, standardizeData
 from pathlib import Path
-from copy import deepcopy
+import csv
+
+CLASS_VALUES = {
+    "INCREASE":1,
+    "RETAIN":0,
+    "DECREASE":-1
+}
 
 def getDatasetDir():
     PROJECT_DIR = Path(__file__).resolve().parent.parent
     return PROJECT_DIR / "PROJECT_DATASET"
 
-def prepareData(data_set_dir, clusters):
+def getLabelsDir():
+    PROJECT_DIR = Path(__file__).resolve().parent.parent
+    return PROJECT_DIR / "PROJECT_DATASET" /"region_policy_results.csv"
+
+def read_labels(labels_path):
+    with open(labels_path, "r", encoding="utf-8-sig") as file:
+        rows = list(csv.reader(file))
+
+    header = rows[0]
+    class_idx = None
+    for j in range(len(header)):
+        if header[j].lower() == "class":
+            class_idx = j
+    if class_idx is None:
+        print("Labels not found.")
+        exit(1)
+
+    labels = {}
+    for row in rows[1:]:
+        if row:
+            word = row[class_idx].strip().upper()
+            labels[row[0].strip()] = CLASS_VALUES[word]
+    return labels
+
+def prepareData(data_set_dir, labels_path):
     regions, fields, matrix = createMatrix(Path(data_set_dir))
 
     # Coalesce NA values to 0 for clustering, then standardize it.
@@ -18,15 +48,14 @@ def prepareData(data_set_dir, clusters):
     region_stats = {regions[i]: cleaned_data[i] for i in range(len(regions))}
 
     scaled_data = standardize(region_stats)
-    random.seed(1) #for reproducibility
-    categories = k_means_clustering(scaled_data, clusters)
+    true_labels = read_labels(labels_path)
 
     featuresList = []
     labelList = []
 
     for region in regions:
         featuresList.append(scaled_data[region])
-        labelList.append(categories[region])
+        labelList.append(true_labels[region])
 
     return regions, featuresList, labelList
 
@@ -135,8 +164,9 @@ def accuracy(results):
 def printOutput(k, p, regions, labelList, results):
     print("K-Nearest Neighbor Output from the regions")
     print("k: " + str(k) + "\t" "p: " + str(p))
+    print("class: 1 = INCREASE, 0 = RETAIN, -1 = DECREASE")
     print("\n")
-    print(f"{'Region':<13}{'Fold':<6}{'K-means':<9}{'KNN':<6}{'':<3}Nearest regions (cluster)")
+    print(f"{'Region':<13}{'Fold':<6}{'True':<9}{'KNN':<6}{'':<3}Nearest regions (cluster)")
     for result in results:
         if result[1] == result[2]:
             mark = "/" #when the predicted cluster is correct
@@ -165,10 +195,11 @@ def printAccuracy(results):
 
 def main():
     #5 clusters for now
-    clusters, folds, k, p = 5, 5, 3, 2
+    folds, k, p = 5, 3, 2
 
     data_set_dir = getDatasetDir()
-    regions, featuresList, labelList = prepareData(data_set_dir, clusters)
+    labels_dir = getLabelsDir()
+    regions, featuresList, labelList = prepareData(data_set_dir, labels_dir)
     
     foldList = kFoldSplit(len(featuresList), folds)
     printFolds(regions, foldList)
