@@ -1,9 +1,10 @@
 import random
 from methods.read_data import createMatrix
-from models.clustering import k_means_clustering, standardize
+from models.clustering import standardize
 from methods.normalize_data import coalesceData, standardizeData
 from pathlib import Path
 import csv
+from evaluation.conf_matrix import evaluate
 
 CLASS_VALUES = {
     "INCREASE":1,
@@ -166,7 +167,7 @@ def printOutput(k, p, regions, labelList, results):
     print("k: " + str(k) + "\t" "p: " + str(p))
     print("class: 1 = INCREASE, 0 = RETAIN, -1 = DECREASE")
     print("\n")
-    print(f"{'Region':<13}{'Fold':<6}{'True':<9}{'KNN':<6}{'':<3}Nearest regions (cluster)")
+    print(f"{'Region':<13}{'Fold':<6}{'True':<9}{'KNN':<6}{'':<3}Nearest regions")
     for result in results:
         if result[1] == result[2]:
             mark = "/" #when the predicted cluster is correct
@@ -193,6 +194,14 @@ def printAccuracy(results):
             correct += 1
     print("\nAccuracy:", round(correct / len(results), 4))
 
+def printConfMatrix(results):
+    actual = []
+    predicted = []
+    for result in results:
+        actual.append(result[1])
+        predicted.append(result[2])
+    return evaluate(actual, predicted)
+
 def main():
     #5 clusters for now
     folds, k, p = 5, 3, 2
@@ -208,6 +217,7 @@ def main():
     results = crossValidation(featuresList, labelList, foldList, k, p)
     printOutput(k, p, regions, labelList, results)
     printAccuracy(results)
+    printConfMatrix(results)
 
 main()
 
