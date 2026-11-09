@@ -48,7 +48,6 @@ def prepareData(data_set_dir, labels_path):
     region_stats = {regions[i]: cleaned_data[i] for i in range(len(regions))}
 
     scaled_data = standardize(region_stats)
-    random.seed(1) #for reproducibility
     true_labels = read_labels(labels_path)
 
     featuresList = []
