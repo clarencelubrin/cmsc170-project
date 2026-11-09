@@ -5,6 +5,7 @@ from methods.normalize_data import coalesceData, standardizeData
 from pathlib import Path
 import csv
 from evaluation.conf_matrix import evaluate
+from evaluation.holdout_validation import holdout_validation, holdout_split
 
 CLASS_VALUES = {
     "INCREASE":1,
@@ -202,9 +203,29 @@ def printConfMatrix(results):
         predicted.append(result[2])
     return evaluate(actual, predicted)
 
+def runHoldout(features_list, label_list,train_ratio, k, p):
+    def model(test, train):
+        return outputMatrix(test, train, k, p)
+    return holdout_validation(features_list, label_list, train_ratio, model)
+
+def printHoldout(featureList, labelList, regions, train_ratio, k, p):
+    results = runHoldout(featureList, labelList, train_ratio, k, p)
+    print("K-Nearest Neighbor Output from the regions (holdout)")
+    print("k: " + str(k) + "\t" "p: " + str(p) + "\t" "train ratio: " + str(train_ratio))
+    print("class: 1 = INCREASE, 0 = RETAIN, -1 = DECREASE")
+    print("only the test regions are shown, the other regions were used for training")
+    print("\n")
+    print(f"{'Region':<13}{'True':<9}{'KNN':<6}")
+    for result in results:
+        if result[1] == result[2]:
+            mark = "/" #when the predicted class is correct
+        else:
+            mark = "x"
+        print(f"{regions[result[0]]:<13}{result[1]:<9}{result[2]:<6}{mark}")
+
 def main():
     #5 clusters for now
-    folds, k, p = 5, 3, 2
+    folds, k, p, train_ratio = 5, 3, 2, 0.8
 
     data_set_dir = getDatasetDir()
     labels_dir = getLabelsDir()
@@ -218,6 +239,7 @@ def main():
     printOutput(k, p, regions, labelList, results)
     printAccuracy(results)
     printConfMatrix(results)
+    printHoldout(featuresList, labelList, regions, train_ratio, k, p)
 
 main()
 
