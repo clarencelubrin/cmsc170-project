@@ -145,7 +145,7 @@ def crossValidation(featuresList, labelList, foldList, k, p):
                 #append the index of the region in the training set
                 nearest.append(trainingIndex[neighbor[2]])
 
-            #(region, real cluster, predicted cluster, neighbors, fold)
+            #(region, real label, predicted label, neighbors, fold)
             i = testingFold[row_idx]
             results.append((i, labelList[i], predicted, nearest, f + 1))
 
@@ -157,7 +157,7 @@ def accuracy(results):
     correct = 0
     for result in results:
         if result[1] == result[2]:
-            #if the predicted cluster is correct
+            #if the predicted label is correct
             correct += 1
     return correct / len(results)
 
