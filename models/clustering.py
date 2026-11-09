@@ -44,10 +44,8 @@ def k_means_clustering(region_stats: dict, k: int, centroids=[]) -> dict:
   e = 0                       # Minimum error for detecting if it still is converging
 
   if len(centroids) == 0:     # Get a random value of centroids
-    centroids = random.sample(list(region_stats.values()), k) # Bug: leads to a propagated error because random.sample creates a new outer list but references the inner list. 
-                                                              # This means that the original region_stats gets continuously modified and this can be seen when u repeat runs
-                                                              # and get centroids that have 0 as their values.
-  centroids = [list(c) for c in centroids] # Fix: no matter if it's the initial or previous centroid, just create a new object that copies the inner list.
+    centroids = random.sample(list(region_stats.values()), k)
+  centroids = [list(c) for c in centroids] 
 
   print("Initial Centroids")
   initial_centroids = [c.copy() for c in centroids] # Initialize the initial centroids
@@ -74,6 +72,7 @@ def k_means_clustering(region_stats: dict, k: int, centroids=[]) -> dict:
       categories[id] = min_index                    # Update the categories dict
 
     # Update the centroids
+    empty_centroids = []    # Indexes of the centroids that have no assigned point
     for centroid_idx in range(len(centroids)):
       total_dimensions = len(region_stats[list(region_stats.keys())[0]])  # Get the number of dimensions
       count = 0     # Count of datapoint
@@ -85,12 +84,21 @@ def k_means_clustering(region_stats: dict, k: int, centroids=[]) -> dict:
           for dim in range(total_dimensions):
             centroids[centroid_idx][dim] += points[dim]
           count += 1                          # Add total count
-      if count == 0:                          # Don't update if count is zero
+      if count == 0:                          # Don't update if count is zero, mark it as empty instead
         centroids[centroid_idx] = prev_centroids[centroid_idx].copy()  # restore the old centroid since it was reset above
+        empty_centroids.append(centroid_idx)
         continue
       # Update the centroid
       for dim in range(total_dimensions):
         centroids[centroid_idx][dim] /= count
+
+    # Pick another random point as its centroid for empty centroids
+    for centroid_idx in empty_centroids:
+      # Only pick from points that are not already a centroid, so the new centroid will get at least that point
+      candidates = [list(points) for points in region_stats.values() if list(points) not in centroids]
+      if len(candidates) == 0:                # Keep the old centroid if there is no point to pick
+        continue
+      centroids[centroid_idx] = random.choice(candidates)
 
     # Check if ALL centroids have converged
     converged = True
