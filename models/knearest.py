@@ -21,6 +21,9 @@ def getLabelsDir():
     PROJECT_DIR = Path(__file__).resolve().parent.parent
     return PROJECT_DIR / "PROJECT_DATASET" /"region_policy_results.csv"
 
+"""
+reads the true class label of every region from the class field in the csv file. INCREASE becomes 1, RETAIN becomes 0 and DECREASE becomes -1.
+"""
 def read_labels(labels_path):
     with open(labels_path, "r", encoding="utf-8-sig") as file:
         rows = list(csv.reader(file))
@@ -41,6 +44,24 @@ def read_labels(labels_path):
             labels[row[0].strip()] = CLASS_VALUES[word]
     return labels
 
+"""
+loads the dataset, cleans it and gets the true class of every region
+ 
+steps:
+1. createMatrix reads the dataset into a matrix, one row per region
+2. missing values are replaced with 0 and the features are standardized
+3. the class of every region is read from the labels file
+ 
+args:
+- data_set_dir = folder of the dataset csv files
+- labels_path = path of the labels csv file
+ 
+return:
+- regions = list of the region names
+- featuresList = list of the standardized numerical values per field for each region
+- labelList = list of the true class of each region (1, 0 or -1)
+all three lists are in the same order, index i is the same region in all of them
+"""
 def prepareData(data_set_dir, labels_path):
     regions, fields, matrix = createMatrix(Path(data_set_dir))
 
@@ -61,13 +82,35 @@ def prepareData(data_set_dir, labels_path):
 
     return regions, featuresList, labelList
 
-
+"""
+computes the Minkowski distance between two rows. p = 1 Manhattan distance and p = 2 Euclidean distance
+ 
+args:
+- test_row = list of the feature values of the row that will be classified
+- training_row = list of the feature values of a training row without its class
+- p = exponent of the distance
+ 
+return:
+- distance between the two rows
+"""
 def distance(test_row, training_row, p):
     total_distance = 0
     for i in range(len(test_row)):
         total_distance += abs(test_row[i]-training_row[i]) ** p
     return total_distance ** (1/p)
 
+"""
+finds the k training rows that are the nearest to test row
+ 
+args:
+- test_instance = feature values of one test row 
+- trainingList = list of training rows, the features with the class as the last element
+- k = number of neighbors
+- p = exponent of the distance
+ 
+return:
+- list of the k nearest neighbors, nearest first. each neighbor is a tuple (class, distance, position of the row in trainingList)
+"""
 def knn(test_instance, trainingList, k, p):
     #one row of test to all training
     distances = []
@@ -79,15 +122,37 @@ def knn(test_instance, trainingList, k, p):
 
     distances.sort(key=lambda x: x[1])
     return distances[:k]
+
+"""
+gets the predicted class from the neighbors by majority. if two classes are tied, the class of the nearest neighbor is chosen
+because the neighbors are sorted from nearest to farthest and max returns the first most common class
  
+args:
+- neighbors = list of tuples from knn, the class is the first element of each tuple
+ 
+return:
+- the most common class among the neighbors
+"""
 def classify(neighbors):
     classes = []
     for neighbor in neighbors:
-        #append only the cluster
+        #append only the label
         classes.append(neighbor[0])
 
     return max(classes, key=classes.count)
+
+"""
+predicts the class of every test row using its k nearest training rows
  
+args:
+- testingList = list of test rows, no label only features
+- trainingList = list of training rows, the features with the class as the last element
+- k = number of neighbors
+- p = exponent of the distance
+ 
+return:
+- new list of the test rows with the predicted class added as the last element of each row. testingList is not changed
+"""
 def outputMatrix(testingList, trainingList, k, p):
     #add the predicted cluster to each test row
     output = []
@@ -99,6 +164,7 @@ def outputMatrix(testingList, trainingList, k, p):
     
     return output
 
+#same as in evaluation folder with specified model
 def kFoldSplit(num_regions, folds):
     #shuffle the positions of the regions
     positions = list(range(num_regions))
