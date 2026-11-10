@@ -1,15 +1,47 @@
 import random
 from methods.read_data import createMatrix
-from models.clustering import k_means_clustering, standardize
+from models.clustering import standardize
 from methods.normalize_data import coalesceData, standardizeData
 from pathlib import Path
-from copy import deepcopy
+import csv
+from evaluation.conf_matrix import evaluate
+from evaluation.holdout_validation import holdout_validation, holdout_split
+
+CLASS_VALUES = {
+    "INCREASE":1,
+    "RETAIN":0,
+    "DECREASE":-1
+}
 
 def getDatasetDir():
     PROJECT_DIR = Path(__file__).resolve().parent.parent
     return PROJECT_DIR / "PROJECT_DATASET"
 
-def prepareData(data_set_dir, clusters):
+def getLabelsDir():
+    PROJECT_DIR = Path(__file__).resolve().parent.parent
+    return PROJECT_DIR / "PROJECT_DATASET" /"region_policy_results.csv"
+
+def read_labels(labels_path):
+    with open(labels_path, "r", encoding="utf-8-sig") as file:
+        rows = list(csv.reader(file))
+
+    header = rows[0]
+    class_idx = None
+    for j in range(len(header)):
+        if header[j].lower() == "class":
+            class_idx = j
+    if class_idx is None:
+        print("Labels not found.")
+        exit(1)
+
+    labels = {}
+    for row in rows[1:]:
+        if row:
+            word = row[class_idx].strip().upper()
+            labels[row[0].strip()] = CLASS_VALUES[word]
+    return labels
+
+def prepareData(data_set_dir, labels_path):
     regions, fields, matrix = createMatrix(Path(data_set_dir))
 
     # Coalesce NA values to 0 for clustering, then standardize it.
@@ -17,15 +49,15 @@ def prepareData(data_set_dir, clusters):
     # Create dictionary of region statistics with region id as key and list of features as value
     region_stats = {regions[i]: cleaned_data[i] for i in range(len(regions))}
 
-    copied_region_stats = deepcopy(region_stats)
-    categories = k_means_clustering(copied_region_stats, clusters)
+    scaled_data = standardize(region_stats)
+    true_labels = read_labels(labels_path)
 
     featuresList = []
     labelList = []
 
     for region in regions:
-        featuresList.append(copied_region_stats[region])
-        labelList.append(categories[region])
+        featuresList.append(scaled_data[region])
+        labelList.append(true_labels[region])
 
     return regions, featuresList, labelList
 
@@ -70,6 +102,7 @@ def outputMatrix(testingList, trainingList, k, p):
 def kFoldSplit(num_regions, folds):
     #shuffle the positions of the regions
     positions = list(range(num_regions))
+    random.seed(1) #for reproducibility
     random.shuffle(positions)
 
     foldList = []
@@ -114,7 +147,7 @@ def crossValidation(featuresList, labelList, foldList, k, p):
                 #append the index of the region in the training set
                 nearest.append(trainingIndex[neighbor[2]])
 
-            #(region, real cluster, predicted cluster, neighbors, fold)
+            #(region, real label, predicted label, neighbors, fold)
             i = testingFold[row_idx]
             results.append((i, labelList[i], predicted, nearest, f + 1))
 
@@ -126,15 +159,16 @@ def accuracy(results):
     correct = 0
     for result in results:
         if result[1] == result[2]:
-            #if the predicted cluster is correct
+            #if the predicted label is correct
             correct += 1
     return correct / len(results)
 
 def printOutput(k, p, regions, labelList, results):
     print("K-Nearest Neighbor Output from the regions")
     print("k: " + str(k) + "\t" "p: " + str(p))
+    print("class: 1 = INCREASE, 0 = RETAIN, -1 = DECREASE")
     print("\n")
-    print(f"{'Region':<13}{'Fold':<6}{'K-means':<9}{'KNN':<6}{'':<3}Nearest regions (cluster)")
+    print(f"{'Region':<13}{'Fold':<6}{'True':<9}{'KNN':<6}{'':<3}Nearest regions")
     for result in results:
         if result[1] == result[2]:
             mark = "/" #when the predicted cluster is correct
@@ -161,12 +195,41 @@ def printAccuracy(results):
             correct += 1
     print("\nAccuracy:", round(correct / len(results), 4))
 
+def printConfMatrix(results):
+    actual = []
+    predicted = []
+    for result in results:
+        actual.append(result[1])
+        predicted.append(result[2])
+    return evaluate(actual, predicted)
+
+def runHoldout(features_list, label_list,train_ratio, k, p):
+    def model(test, train):
+        return outputMatrix(test, train, k, p)
+    return holdout_validation(features_list, label_list, train_ratio, model)
+
+def printHoldout(featureList, labelList, regions, train_ratio, k, p):
+    results = runHoldout(featureList, labelList, train_ratio, k, p)
+    print("K-Nearest Neighbor Output from the regions (holdout)")
+    print("k: " + str(k) + "\t" "p: " + str(p) + "\t" "train ratio: " + str(train_ratio))
+    print("class: 1 = INCREASE, 0 = RETAIN, -1 = DECREASE")
+    print("only the test regions are shown, the other regions were used for training")
+    print("\n")
+    print(f"{'Region':<13}{'True':<9}{'KNN':<6}")
+    for result in results:
+        if result[1] == result[2]:
+            mark = "/" #when the predicted class is correct
+        else:
+            mark = "x"
+        print(f"{regions[result[0]]:<13}{result[1]:<9}{result[2]:<6}{mark}")
+
 def main():
     #5 clusters for now
-    clusters, folds, k, p = 5, 5, 3, 2
+    folds, k, p, train_ratio = 5, 3, 2, 0.8
 
     data_set_dir = getDatasetDir()
-    regions, featuresList, labelList = prepareData(data_set_dir, clusters)
+    labels_dir = getLabelsDir()
+    regions, featuresList, labelList = prepareData(data_set_dir, labels_dir)
     
     foldList = kFoldSplit(len(featuresList), folds)
     printFolds(regions, foldList)
@@ -175,6 +238,8 @@ def main():
     results = crossValidation(featuresList, labelList, foldList, k, p)
     printOutput(k, p, regions, labelList, results)
     printAccuracy(results)
+    printConfMatrix(results)
+    printHoldout(featuresList, labelList, regions, train_ratio, k, p)
 
 main()
 
