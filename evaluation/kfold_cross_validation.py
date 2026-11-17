@@ -1,5 +1,14 @@
 import random
+"""
+splits the shuffled indices of the regions into specified fold
 
+args: 
+- num_regions = total amt of regions
+- folds = specified amt of folds
+
+return: 
+- 2 dimensional array of integers ranging 0 to num_regions - 1
+"""
 def kFoldSplit(num_regions, folds):
     #shuffle the positions of the regions
     positions = list(range(num_regions))
@@ -15,7 +24,19 @@ def kFoldSplit(num_regions, folds):
 
     #returns a 2d array of shuffled integers for region idx
     return foldList
- 
+
+"""
+evaluates the model's output through the use of specified amt of folds. all folds will be the test case once and the rest are the training cases
+
+args:
+- featuresList = list of numerical values per fields for each row
+- labelList = list of true label per region, same order as featuresList
+- foldList = 2d array of region indices
+- model = function model(testingRows, trainingList) which returns the testing rows with the predicted label added as the last element per row   
+
+return:
+- list of tuples (region index, true label, predicted label, fold number) sorted by region index. the fold number starts at 1
+""" 
 def crossValidation(featuresList, labelList, foldList, model):
     #the regions are split into folds, each fold is the test set once, other folds are training set
     folds = len(foldList)
