@@ -282,27 +282,6 @@
       </figure>
     </div>
 
-    <div class="section-wrapper">
-      <h2>Abstract</h2>
-      <p>
-        Deciding where public money should go is usually argued from theory, not learned from data. This project turns seven
-        development theories into explicit rules, applies them to every Philippine province, and asks how well simple machine-learning
-        models can reproduce the resulting decisions.
-      </p>
-      <p>
-        Each province is described by 12 features from the Philippine Statistics Authority: poverty incidence in 2018, 2021 and 2023,
-        severity of poverty, the number of poor people, the poverty threshold, average family income and expenditure, the share of
-        spending that goes to information and communication, and three derived measures of poverty change and income inequality.
-        Three models are implemented in plain Python without machine-learning libraries: k-means clustering, k-nearest neighbors,
-        and a multi-layer perceptron with one hidden layer.
-      </p>
-      <p>
-        The models are compared with holdout validation, 5-fold cross validation and a confusion matrix. The MLP reaches 82% accuracy
-        on the holdout set and 76% in cross validation, k-nearest neighbors 76% and 75%, and k-means 65% and 64%. All three find
-        the small DECREASE class hardest, and none of them ever mistakes a DECREASE province for an INCREASE one or the reverse.
-      </p>
-    </div>
-
     <div class="section-wrapper" id="leaderboard">
       <h2>Leaderboard</h2>
       <div class="table-scroll">
@@ -424,17 +403,6 @@
         <li><strong>INCREASE is the easiest class.</strong> It is also the largest. KNN and the MLP both find 85% of INCREASE provinces.</li>
         <li><strong>DECREASE is the hardest to find.</strong> With only 10 examples, the best models find 6 of them. When the MLP does predict DECREASE it is usually right (precision 0.86).</li>
         <li><strong>Results are stable across folds.</strong> KNN and the MLP stay between 71% and 82% in every fold; k-means ranges from 56% to 76%.</li>
-      </ul>
-    </div>
-
-    <div class="section-wrapper">
-      <h2>Limitations</h2>
-      <ul>
-        <li><strong>The labels come from rules, not from real budget decisions.</strong> The models are being scored on how well they imitate the seven policies.</li>
-        <li><strong>The models cannot see everything the rules use.</strong> The rules rely on internet-use figures that are published by region only, so each province borrows its region's values. Those figures are not among the 12 features.</li>
-        <li><strong>The dataset is small.</strong> With 87 provinces and 10 in the DECREASE class, one province changes a score by more than a percentage point. The gap between KNN and the MLP is within that margin.</li>
-        <li><strong>Provinces in the same region resemble each other</strong> and often share a label, and the folds are split at random, so the accuracy figures are likely optimistic.</li>
-        <li><strong>Settings were not tuned for the comparison.</strong> Each model uses one fixed configuration.</li>
       </ul>
     </div>
 
