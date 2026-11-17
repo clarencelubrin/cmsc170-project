@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budget Allocation by Province: K-Means, KNN and MLP compared</title>
+  <meta name="description" content="Three from-scratch models classify 87 Philippine provinces as INCREASE, RETAIN or DECREASE budget allocation, compared with holdout validation, k-fold cross validation and a confusion matrix.">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
+      background: #fff;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: #2a78d6; }
+    .content-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+      box-sizing: border-box;
+    }
+    header {
+      padding: 3rem 1rem 0.5rem;
+    }
+    .eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 0.75rem;
+      color: #111;
+    }
+    .authors {
+      font-size: 1rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+    .affiliations {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+    .buttons {
+      margin: 1.5rem auto;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      padding: 0 1rem;
+    }
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 9999px;
+      padding: 0.5rem 1.1rem;
+      font-weight: 500;
+      transition: background 0.2s ease-in-out;
+    }
+    .btn-link:hover { background: #333; }
+
+    .section-wrapper {
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+      text-align: left;
+    }
+    .section-wrapper h2 {
+      font-size: 1.5rem;
+      margin: 0 0 1rem;
+      text-align: center;
+      color: #111;
+    }
+    .section-wrapper h3 {
+      font-size: 1.05rem;
+      margin: 1.5rem 0 0.5rem;
+      color: #111;
+    }
+    .section-wrapper p,
+    .section-wrapper li {
+      line-height: 1.6;
+    }
+    .section-wrapper p { margin: 0 0 1rem; }
+    .section-wrapper ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+    .tldr {
+      background: #f2eee8;
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem;
+    }
+    .tldr p:last-child { margin-bottom: 0; }
+
+    /* Stat tiles */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin: 1.5rem 0 0;
+    }
+    .stat {
+      border: 1px solid #e4e3df;
+      border-radius: 0.75rem;
+      padding: 1rem 0.5rem;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 0.35rem;
+    }
+
+    /* Figures */
+    figure {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+      border: 1px solid #e4e3df;
+    }
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Leaderboard */
+    .table-scroll { overflow-x: auto; }
+    .leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 560px;
+    }
+    .leaderboard-table th,
+    .leaderboard-table td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .leaderboard-table th {
+      background: #f4f4f4;
+      font-weight: 600;
+    }
+    .leaderboard-table tr:last-child td { border-bottom: none; }
+    .leaderboard-table td.num,
+    .leaderboard-table th.num { text-align: right; white-space: nowrap; }
+    .model-name { font-weight: 600; color: #111; white-space: nowrap; }
+    .swatch {
+      display: inline-block;
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 2px;
+      margin-right: 0.5rem;
+    }
+    .progress {
+      background: #e9e8e4;
+      border-radius: 5px;
+      height: 18px;
+      min-width: 140px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      border-radius: 5px;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.75rem;
+    }
+
+    /* Plain tables */
+    .plain-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 1rem;
+      font-size: 0.95rem;
+    }
+    .plain-table th,
+    .plain-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    .plain-table th { background: #f4f4f4; font-weight: 600; }
+    .plain-table tr:last-child td { border-bottom: none; }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      border: 1px solid #bbb;
+      border-radius: 9999px;
+      padding: 0.1rem 0.6rem;
+      color: #333;
+      white-space: nowrap;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+      background: #f5f4f1;
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+    .references p {
+      font-size: 0.92rem;
+      padding-left: 1.5rem;
+      text-indent: -1.5rem;
+      margin-bottom: 0.6rem;
+      overflow-wrap: anywhere;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 0 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 1.5rem; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .tldr { padding: 1rem 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="content-wrapper">
+
+    <header>
+      <div class="eyebrow">CMSC 170 Project</div>
+      <h1>Which provinces need more budget?<br>K-Means, KNN and an MLP compared on 87&nbsp;Philippine&nbsp;provinces</h1>
+      <div class="authors">
+        Clarence Lubrin, Kurt Laraño, Thea Tuazon
+      </div>
+      <div class="affiliations">
+        Poverty and income data from the Philippine Statistics Authority
+      </div>
+    </header>
+
+    <div class="buttons">
+      <a class="btn-link" href="https://github.com/clarencelubrin/cmsc170-project" target="_blank" rel="noopener">Code</a>
+      <a class="btn-link" href="https://github.com/clarencelubrin/cmsc170-project/blob/main/model-comparison.ipynb" target="_blank" rel="noopener">Comparison notebook</a>
+      <a class="btn-link" href="https://openstat.psa.gov.ph" target="_blank" rel="noopener">Data: PSA OpenSTAT</a>
+      <a class="btn-link" href="#leaderboard">Leaderboard</a>
+    </div>
+
+    <div class="section-wrapper">
+
+      <div class="stats">
+        <div class="stat"><div class="stat-value">87</div><div class="stat-label">provinces</div></div>
+        <div class="stat"><div class="stat-value">12</div><div class="stat-label">features</div></div>
+        <div class="stat"><div class="stat-value">3</div><div class="stat-label">models</div></div>
+        <div class="stat"><div class="stat-value">76%</div><div class="stat-label">best 5-fold accuracy</div></div>
+      </div>
+
+      <figure>
+        <img src="assets/accuracy.png" alt="Bar charts of accuracy. Holdout validation: K-Means 65%, K-Nearest Neighbors 76%, MLP 82%. K-fold cross validation: K-Means 64%, K-Nearest Neighbors 75%, MLP 76%. A second chart shows accuracy in each of the five folds.">
+        <figcaption>Accuracy of each model under holdout validation and 5-fold cross validation (left), and in each fold (right).</figcaption>
+      </figure>
+    </div>
+
+    <div class="section-wrapper">
+      <h2>Abstract</h2>
+      <p>
+        Deciding where public money should go is usually argued from theory, not learned from data. This project turns seven
+        development theories into explicit rules, applies them to every Philippine province, and asks how well simple machine-learning
+        models can reproduce the resulting decisions.
+      </p>
+      <p>
+        Each province is described by 12 features from the Philippine Statistics Authority: poverty incidence in 2018, 2021 and 2023,
+        severity of poverty, the number of poor people, the poverty threshold, average family income and expenditure, the share of
+        spending that goes to information and communication, and three derived measures of poverty change and income inequality.
+        Three models are implemented in plain Python without machine-learning libraries: k-means clustering, k-nearest neighbors,
+        and a multi-layer perceptron with one hidden layer.
+      </p>
+      <p>
+        The models are compared with holdout validation, 5-fold cross validation and a confusion matrix. The MLP reaches 82% accuracy
+        on the holdout set and 76% in cross validation, k-nearest neighbors 76% and 75%, and k-means 65% and 64%. All three find
+        the small DECREASE class hardest, and none of them ever mistakes a DECREASE province for an INCREASE one or the reverse.
+      </p>
+    </div>
+
+    <div class="section-wrapper" id="leaderboard">
+      <h2>Leaderboard</h2>
+      <div class="table-scroll">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>5-fold accuracy</th>
+              <th class="num">5-fold</th>
+              <th class="num">Holdout</th>
+              <th class="num">Average F1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="model-name"><span class="swatch" style="background:#1baf7a"></span>MLP</td>
+              <td><div class="progress"><div class="progress-bar" style="width:75.86%;background:#1baf7a"></div></div></td>
+              <td class="num">75.86%</td>
+              <td class="num">82.35%</td>
+              <td class="num">0.73</td>
+            </tr>
+            <tr>
+              <td class="model-name"><span class="swatch" style="background:#eb6834"></span>K-Nearest Neighbors</td>
+              <td><div class="progress"><div class="progress-bar" style="width:74.71%;background:#eb6834"></div></div></td>
+              <td class="num">74.71%</td>
+              <td class="num">76.47%</td>
+              <td class="num">0.71</td>
+            </tr>
+            <tr>
+              <td class="model-name"><span class="swatch" style="background:#2a78d6"></span>K-Means</td>
+              <td><div class="progress"><div class="progress-bar" style="width:64.37%;background:#2a78d6"></div></div></td>
+              <td class="num">64.37%</td>
+              <td class="num">64.71%</td>
+              <td class="num">0.59</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        5-fold accuracy counts all 87 provinces, each predicted once. Holdout accuracy is measured on 17 test provinces after training on the other 70.
+        Average F1 is the mean of the F1 scores of the three classes, taken from the 5-fold predictions.
+      </p>
+    </div>
+
+    <div class="section-wrapper">
+      <h2>How the provinces are labeled</h2>
+      <p>
+        Each province is tagged under seven policies. Every policy compares the province against the national figure and returns one tag.
+        The final class is the tag most of the seven policies give; a tie goes to RETAIN.
+      </p>
+      <div class="table-scroll">
+        <table class="plain-table">
+          <thead>
+            <tr><th>Theory</th><th>What it asks</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Lewis (1954), dual-sector model</td><td>Is there a large pool of poor workers earning close to subsistence, with little saving or job-seeking?</td></tr>
+            <tr><td>Myrdal (1957), cumulative causation</td><td>Is the province stuck in a vicious circle, or is it a prosperous center whose poverty is falling faster than the nation's?</td></tr>
+            <tr><td>Schultz (1961), human capital</td><td>Is online learning low where poverty is high?</td></tr>
+            <tr><td>Layne &amp; Lee (2001), e-government stages</td><td>Do people get information from, and transact with, government online?</td></tr>
+            <tr><td>Röller &amp; Waverman (2001), critical mass</td><td>Has basic connectivity reached the national level?</td></tr>
+            <tr><td>van Dijk (2005), resources and appropriation</td><td>Is there a gap in access, in productive use of the internet, or in both?</td></tr>
+            <tr><td>Sen (1999), capability approach</td><td>How many of five deprivations (education, health, income, participation, security) apply?</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The result is an uneven set of labels, which matters when reading the scores below:</p>
+      <div class="table-scroll">
+        <table class="plain-table">
+          <thead>
+            <tr><th>Class</th><th>Provinces</th><th>Share</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="tag">INCREASE</span></td><td>46</td><td>53%</td></tr>
+            <tr><td><span class="tag">RETAIN</span></td><td>31</td><td>36%</td></tr>
+            <tr><td><span class="tag">DECREASE</span></td><td>10</td><td>11%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section-wrapper">
+      <h2>Models and evaluation</h2>
+      <h3>Models</h3>
+      <ul>
+        <li><strong>K-Means</strong> groups the training provinces into 5 clusters without looking at their labels. Each cluster then takes the most common class among its members, and a new province gets the class of its nearest cluster center.</li>
+        <li><strong>K-Nearest Neighbors</strong> gives a province the most common class among its 4 nearest training provinces, by Euclidean distance.</li>
+        <li><strong>MLP</strong> is a neural network with 12 inputs, one hidden layer of 10 tanh neurons and a 3-class softmax output, trained with batch gradient descent for 200 iterations at a learning rate of 0.1.</li>
+      </ul>
+      <h3>Evaluation methods</h3>
+      <ul>
+        <li><strong>Holdout validation</strong> trains on 80% of the provinces and tests on the remaining 20%. The split is seeded, so all models see the same provinces.</li>
+        <li><strong>K-fold cross validation</strong> splits the provinces into 5 folds and uses each fold as the test set once, so every province is predicted exactly once.</li>
+        <li><strong>Confusion matrix</strong> counts each pair of actual and predicted class, and gives recall, precision and F1 score for each class.</li>
+      </ul>
+      <p>All features are standardized to zero mean and unit variance before training.</p>
+    </div>
+
+    <div class="section-wrapper">
+      <h2>Results</h2>
+
+      <h3>Where the models go wrong</h3>
+      <figure>
+        <img src="assets/confusion-matrix.png" alt="Three confusion matrices from 5-fold cross validation. K-Means: of 10 DECREASE provinces 4 correct and 6 predicted RETAIN; of 31 RETAIN 19 correct, 3 DECREASE, 9 INCREASE; of 46 INCREASE 33 correct and 13 RETAIN. K-Nearest Neighbors: DECREASE 6 correct, 4 RETAIN; RETAIN 20 correct, 2 DECREASE, 9 INCREASE; INCREASE 39 correct, 7 RETAIN. MLP: DECREASE 6 correct, 4 RETAIN; RETAIN 21 correct, 1 DECREASE, 9 INCREASE; INCREASE 39 correct, 7 RETAIN.">
+        <figcaption>Confusion matrix of each model from 5-fold cross validation. Rows are the actual class, columns the predicted class.</figcaption>
+      </figure>
+      <ul>
+        <li><strong>Every mistake is a near miss.</strong> No model ever predicts INCREASE for a DECREASE province, or DECREASE for an INCREASE province. All errors involve RETAIN, the middle class.</li>
+        <li><strong>KNN and the MLP are almost the same model here.</strong> Their matrices differ by one province: the MLP gets one more RETAIN province right.</li>
+        <li><strong>K-means leans toward RETAIN.</strong> It sends 13 INCREASE provinces and 6 DECREASE provinces to RETAIN.</li>
+      </ul>
+
+      <h3>Performance by class</h3>
+      <figure>
+        <img src="assets/metrics.png" alt="Bar charts of recall, precision and F1 score per class. Recall for DECREASE, RETAIN, INCREASE: K-Means 0.40, 0.61, 0.72; K-Nearest Neighbors 0.60, 0.65, 0.85; MLP 0.60, 0.68, 0.85. Precision: K-Means 0.57, 0.50, 0.79; K-Nearest Neighbors 0.75, 0.65, 0.81; MLP 0.86, 0.66, 0.81. F1 score: K-Means 0.47, 0.55, 0.75; K-Nearest Neighbors 0.67, 0.65, 0.83; MLP 0.71, 0.67, 0.83.">
+        <figcaption>Recall, precision and F1 score of each class, from the 5-fold predictions.</figcaption>
+      </figure>
+      <ul>
+        <li><strong>INCREASE is the easiest class.</strong> It is also the largest. KNN and the MLP both find 85% of INCREASE provinces.</li>
+        <li><strong>DECREASE is the hardest to find.</strong> With only 10 examples, the best models find 6 of them. When the MLP does predict DECREASE it is usually right (precision 0.86).</li>
+        <li><strong>Results are stable across folds.</strong> KNN and the MLP stay between 71% and 82% in every fold; k-means ranges from 56% to 76%.</li>
+      </ul>
+    </div>
+
+    <div class="section-wrapper">
+      <h2>Limitations</h2>
+      <ul>
+        <li><strong>The labels come from rules, not from real budget decisions.</strong> The models are being scored on how well they imitate the seven policies.</li>
+        <li><strong>The models cannot see everything the rules use.</strong> The rules rely on internet-use figures that are published by region only, so each province borrows its region's values. Those figures are not among the 12 features.</li>
+        <li><strong>The dataset is small.</strong> With 87 provinces and 10 in the DECREASE class, one province changes a score by more than a percentage point. The gap between KNN and the MLP is within that margin.</li>
+        <li><strong>Provinces in the same region resemble each other</strong> and often share a label, and the folds are split at random, so the accuracy figures are likely optimistic.</li>
+        <li><strong>Settings were not tuned for the comparison.</strong> Each model uses one fixed configuration.</li>
+      </ul>
+    </div>
+
+    <div class="section-wrapper">
+      <h2>Data</h2>
+      <p>All inputs are from the Philippine Statistics Authority, downloaded from <a href="https://openstat.psa.gov.ph" target="_blank" rel="noopener">OpenSTAT</a>.</p>
+      <ul>
+        <li><strong>2023 Full Year Official Poverty Statistics</strong>: poverty incidence, poverty threshold, magnitude of poor population and severity of poverty, by region and province (2018, 2021 and 2023).</li>
+        <li><strong>2023 Family Income and Expenditure Survey</strong>: average family income and expenditure, income by decile, and expenditure by major group, by region, province and highly urbanized city.</li>
+        <li><strong>Internet use by type of use and region, 2024</strong>: used for the labeling rules only.</li>
+      </ul>
+      <p>
+        The 87 units are 81 provinces, Isabela City, Cotabato City and the four districts of the National Capital Region, which has no provinces.
+        Highly urbanized cities are counted inside their province.
+      </p>
+    </div>
+
+    <div class="section-wrapper references">
+      <h2>References</h2>
+      <p>Layne, K., &amp; Lee, J. (2001). Developing fully functional E-government: A four stage model. <em>Government Information Quarterly, 18</em>(2), 122–136. https://doi.org/10.1016/S0740-624X(01)00066-1</p>
+      <p>Lewis, W. A. (1954). Economic development with unlimited supplies of labour. <em>The Manchester School, 22</em>(2), 139–191. https://doi.org/10.1111/j.1467-9957.1954.tb00021.x</p>
+      <p>Myrdal, G. (1957). <em>Economic theory and under-developed regions</em>. Gerald Duckworth.</p>
+      <p>Röller, L.-H., &amp; Waverman, L. (2001). Telecommunications infrastructure and economic development: A simultaneous approach. <em>American Economic Review, 91</em>(4), 909–923. https://doi.org/10.1257/aer.91.4.909</p>
+      <p>Schultz, T. W. (1961). Investment in human capital. <em>The American Economic Review, 51</em>(1), 1–17. https://www.jstor.org/stable/1818907</p>
+      <p>Sen, A. (1999). <em>Development as freedom</em>. Oxford University Press.</p>
+      <p>van Dijk, J. A. G. M. (2005). <em>The deepening divide: Inequality in the information society</em>. Sage Publications. https://doi.org/10.4135/9781452229812</p>
+    </div>
+
+    <footer>
+      Figures and numbers on this page come from <code>model-comparison.ipynb</code> in the project repository.
+    </footer>
+
+  </div>
+</body>
+</html>
