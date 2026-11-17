@@ -47,7 +47,7 @@ def forward_propagation(w1, b1, w2, b2, X):
     Z1, A1, Z2, A2 = [], [], [], []
     for x in X:
         z1 = [dot(w1[h], x) + b1[h] for h in range(hiddenNum)]
-        a1 = [RelU(z) for z in z1]
+        a1 = [Tanh(z) for z in z1]
         z2 = [dot(w2[o], a1) + b2[o] for o in range(outputNum)]
         a2 = softmax(z2)
         Z1.append(z1) 
@@ -75,7 +75,7 @@ def back_propagation(Z1, A1, Z2, A2, w1, w2, X, Y):
     db2 = [1 / m * sum(row) for row in dZ2_T]
 
     w2_T = transpose(w2)
-    dZ1 = [[dot(w2_T[h], dZ2[s]) * deriv_RelU(Z1[s][h]) for h in range(hiddenNum)] for s in range(m)]
+    dZ1 = [[dot(w2_T[h], dZ2[s]) * deriv_Tanh(Z1[s][h]) for h in range(hiddenNum)] for s in range(m)]
     dZ1_T = transpose(dZ1)
     dW1 = [[1 / m * dot(dZ1_T[h], X_T[i]) for i in range(inputNum)] for h in range(hiddenNum)]
     db1 = [1 / m * sum(row) for row in dZ1_T]
@@ -118,7 +118,7 @@ def gradient_descent(X, Y, alpha, iterations, hiddenNum, outputNum):
 """
 ACTIVATION FUNCTIONS SECTION
 
-Reference: https://www.geeksforgeeks.org/deep-learning/choosing-the-right-activation-function-for-your-neural-network/
+Reference: https://www.geeksforgeeks.org/deep-learning/choosing-the-right-activation-function-for-your-neural-network/, https://www.geeksforgeeks.org/deep-learning/tanh-activation-in-neural-network/
 """
 # def sigmoid(z): # For output layer, since current implementation of classification is binary
 #     return 1/(1+math.exp(-z))
@@ -134,3 +134,9 @@ def RelU(z): # For hidden layer, simple implementation (switch to other activati
 
 def deriv_RelU(z):
     return int(z > 0) # if z is greater than 0, return 1. Else, return 0. 
+
+def Tanh(z):
+    return math.tanh(z)
+
+def deriv_Tanh(z):
+    return 1 - math.tanh(z) ** 2
