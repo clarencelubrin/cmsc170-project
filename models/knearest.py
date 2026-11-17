@@ -19,10 +19,11 @@ def getDatasetDir():
 
 def getLabelsDir():
     PROJECT_DIR = Path(__file__).resolve().parent.parent
-    return PROJECT_DIR / "PROJECT_DATASET" /"region_policy_results.csv"
+    return PROJECT_DIR / "PROJECT_DATASET" /"province_policy_results.csv"
 
 """
-reads the true class label of every region from the class field in the csv file. INCREASE becomes 1, RETAIN becomes 0 and DECREASE becomes -1.
+reads the true class label of every province from the class field in the csv file. INCREASE becomes 1, RETAIN becomes 0 and DECREASE becomes -1.
+the labeled dataset (province_policy_results.csv) is created by methods/label_data.py
 """
 def read_labels(labels_path):
     with open(labels_path, "r", encoding="utf-8-sig") as file:
@@ -45,42 +46,42 @@ def read_labels(labels_path):
     return labels
 
 """
-loads the dataset, cleans it and gets the true class of every region
+loads the dataset, cleans it and gets the true class of every province
  
 steps:
-1. createMatrix reads the dataset into a matrix, one row per region
+1. createMatrix reads the dataset into a matrix, one row per province
 2. missing values are replaced with 0 and the features are standardized
-3. the class of every region is read from the labels file
+3. the class of every province is read from the labels file
  
 args:
 - data_set_dir = folder of the dataset csv files
 - labels_path = path of the labels csv file
  
 return:
-- regions = list of the region names
-- featuresList = list of the standardized numerical values per field for each region
-- labelList = list of the true class of each region (1, 0 or -1)
-all three lists are in the same order, index i is the same region in all of them
+- provinces = list of the province names
+- featuresList = list of the standardized numerical values per field for each province
+- labelList = list of the true class of each province (1, 0 or -1)
+all three lists are in the same order, index i is the same province in all of them
 """
 def prepareData(data_set_dir, labels_path):
-    regions, fields, matrix = createMatrix(Path(data_set_dir))
+    provinces, fields, matrix = createMatrix(Path(data_set_dir))
 
     # Coalesce NA values to 0 for clustering, then standardize it.
     cleaned_data = standardizeData(coalesceData(matrix))
-    # Create dictionary of region statistics with region id as key and list of features as value
-    region_stats = {regions[i]: cleaned_data[i] for i in range(len(regions))}
+    # Create dictionary of province statistics with province name as key and list of features as value
+    province_stats = {provinces[i]: cleaned_data[i] for i in range(len(provinces))}
 
-    scaled_data = standardize(region_stats)
+    scaled_data = standardize(province_stats)
     true_labels = read_labels(labels_path)
 
     featuresList = []
     labelList = []
 
-    for region in regions:
-        featuresList.append(scaled_data[region])
-        labelList.append(true_labels[region])
+    for province in provinces:
+        featuresList.append(scaled_data[province])
+        labelList.append(true_labels[province])
 
-    return regions, featuresList, labelList
+    return provinces, featuresList, labelList
 
 """
 computes the Minkowski distance between two rows. p = 1 Manhattan distance and p = 2 Euclidean distance
@@ -230,11 +231,11 @@ def accuracy(results):
     return correct / len(results)
 
 def printOutput(k, p, regions, labelList, results):
-    print("K-Nearest Neighbor Output from the regions")
+    print("K-Nearest Neighbor Output from the provinces")
     print("k: " + str(k) + "\t" "p: " + str(p))
     print("class: 1 = INCREASE, 0 = RETAIN, -1 = DECREASE")
     print("\n")
-    print(f"{'Region':<13}{'Fold':<6}{'True':<9}{'KNN':<6}{'':<3}Nearest regions")
+    print(f"{'Province':<22}{'Fold':<6}{'True':<9}{'KNN':<6}{'':<3}Nearest provinces")
     for result in results:
         if result[1] == result[2]:
             mark = "/" #when the predicted cluster is correct
@@ -244,7 +245,7 @@ def printOutput(k, p, regions, labelList, results):
         for j in result[3]:
             nearest += regions[j] + " (" + str(labelList[j]) + "), "
         #print region, real cluster, predicted cluster, neighbors, fold
-        print(f"{regions[result[0]]:<13}{result[4]:<6}{result[1]:<9}{result[2]:<6}{mark:<3}{nearest[:-2]}")
+        print(f"{regions[result[0]]:<22}{result[4]:<6}{result[1]:<9}{result[2]:<6}{mark:<3}{nearest[:-2]}")
 
 def printFolds(regions, foldList):
     for f in range(len(foldList)):
@@ -276,18 +277,18 @@ def runHoldout(features_list, label_list,train_ratio, k, p):
 
 def printHoldout(featureList, labelList, regions, train_ratio, k, p):
     results = runHoldout(featureList, labelList, train_ratio, k, p)
-    print("K-Nearest Neighbor Output from the regions (holdout)")
+    print("K-Nearest Neighbor Output from the provinces (holdout)")
     print("k: " + str(k) + "\t" "p: " + str(p) + "\t" "train ratio: " + str(train_ratio))
     print("class: 1 = INCREASE, 0 = RETAIN, -1 = DECREASE")
-    print("only the test regions are shown, the other regions were used for training")
+    print("only the test provinces are shown, the other provinces were used for training")
     print("\n")
-    print(f"{'Region':<13}{'True':<9}{'KNN':<6}")
+    print(f"{'Province':<22}{'True':<9}{'KNN':<6}")
     for result in results:
         if result[1] == result[2]:
             mark = "/" #when the predicted class is correct
         else:
             mark = "x"
-        print(f"{regions[result[0]]:<13}{result[1]:<9}{result[2]:<6}{mark}")
+        print(f"{regions[result[0]]:<22}{result[1]:<9}{result[2]:<6}{mark}")
 
 def main():
     #5 clusters for now
