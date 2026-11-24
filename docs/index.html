@@ -137,6 +137,12 @@
       border-radius: 0.75rem;
       border: 1px solid #e4e3df;
     }
+    .figure-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 1rem;
+    }
+    .figure-grid figure { margin: 0 0 1.25rem; }
     figcaption {
       margin-top: 0.5rem;
       font-size: 0.9rem;
@@ -243,6 +249,7 @@
       h1 { font-size: 1.5rem; }
       .stats { grid-template-columns: repeat(2, 1fr); }
       .tldr { padding: 1rem 1.1rem; }
+      .figure-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -273,11 +280,11 @@
         <div class="stat"><div class="stat-value">87</div><div class="stat-label">provinces</div></div>
         <div class="stat"><div class="stat-value">12</div><div class="stat-label">features</div></div>
         <div class="stat"><div class="stat-value">3</div><div class="stat-label">models</div></div>
-        <div class="stat"><div class="stat-value">75%</div><div class="stat-label">best 5-fold accuracy</div></div>
+        <div class="stat"><div class="stat-value">77%</div><div class="stat-label">best 5-fold accuracy</div></div>
       </div>
 
       <figure>
-        <img src="assets/accuracy.png" alt="Bar charts of accuracy. Holdout validation: K-Means 65%, K-Nearest Neighbors 82%, MLP 82%. K-fold cross validation: K-Means 70%, K-Nearest Neighbors 75%, MLP 68%. A second chart shows accuracy in each of the five folds.">
+        <img src="assets/accuracy.png" alt="Bar charts of accuracy. Holdout validation: K-Means 65%, K-Nearest Neighbors 82%, MLP 76%. K-fold cross validation: K-Means 70%, K-Nearest Neighbors 75%, MLP 77%. A second chart shows accuracy in each of the five folds.">
         <figcaption>Accuracy of each model under holdout validation and 5-fold cross validation (left), and in each fold (right).</figcaption>
       </figure>
     </div>
@@ -297,25 +304,25 @@
           </thead>
           <tbody>
             <tr>
-              <td class="model-name"><span class="swatch" style="background:#eb6834"></span>K-Nearest Neighbors</td>
-              <td><div class="progress"><div class="progress-bar" style="width:74.71%;background:#eb6834"></div></div></td>
+              <td class="model-name"><span class="swatch" style="background:#ea801c"></span>MLP</td>
+              <td><div class="progress"><div class="progress-bar" style="width:77.01%;background:#ea801c"></div></div></td>
+              <td class="num">77.01%</td>
+              <td class="num">76.47%</td>
+              <td class="num">0.73</td>
+            </tr>
+            <tr>
+              <td class="model-name"><span class="swatch" style="background:#e02b35"></span>K-Nearest Neighbors</td>
+              <td><div class="progress"><div class="progress-bar" style="width:74.71%;background:#e02b35"></div></div></td>
               <td class="num">74.71%</td>
               <td class="num">82.35%</td>
               <td class="num">0.71</td>
             </tr>
             <tr>
-              <td class="model-name"><span class="swatch" style="background:#2a78d6"></span>K-Means</td>
-              <td><div class="progress"><div class="progress-bar" style="width:70.11%;background:#2a78d6"></div></div></td>
+              <td class="model-name"><span class="swatch" style="background:#082a54"></span>K-Means</td>
+              <td><div class="progress"><div class="progress-bar" style="width:70.11%;background:#082a54"></div></div></td>
               <td class="num">70.11%</td>
               <td class="num">64.71%</td>
               <td class="num">0.64</td>
-            </tr>
-            <tr>
-              <td class="model-name"><span class="swatch" style="background:#1baf7a"></span>MLP</td>
-              <td><div class="progress"><div class="progress-bar" style="width:67.82%;background:#1baf7a"></div></div></td>
-              <td class="num">67.82%</td>
-              <td class="num">82.35%</td>
-              <td class="num">0.63</td>
             </tr>
           </tbody>
         </table>
@@ -323,6 +330,7 @@
       <p class="note">
         5-fold accuracy counts all 87 provinces, each predicted once. Holdout accuracy is measured on 17 test provinces after training on the other 70.
         Average F1 is the mean of the F1 scores of the three classes, taken from the 5-fold predictions.
+        The MLP settings were tuned on the 70 training provinces, which also appear in the five folds, so its 5-fold score is slightly optimistic.
       </p>
     </div>
 
@@ -369,7 +377,7 @@
       <ul>
         <li><strong>K-Means</strong> groups the training provinces into 7 clusters without looking at their labels. Each cluster then takes the most common class among its members, and a new province gets the class of its nearest cluster center.</li>
         <li><strong>K-Nearest Neighbors</strong> gives a province the most common class among its 10 nearest training provinces, by Euclidean distance.</li>
-        <li><strong>MLP</strong> is a neural network with 12 inputs, one hidden layer of 65 tanh neurons and a 3-class softmax output, trained with batch gradient descent for 250 iterations at a learning rate of 0.1.</li>
+        <li><strong>MLP</strong> is a neural network with 12 inputs, one hidden layer of 20 tanh neurons and a 3-class softmax output, trained with batch gradient descent for 200 iterations at a learning rate of 0.05. These settings were picked by a grid search over 54 combinations, each scored with 5-fold cross validation on the 70 training provinces.</li>
       </ul>
       <h3>Evaluation methods</h3>
       <ul>
@@ -381,30 +389,64 @@
     </div>
 
     <div class="section-wrapper">
+      <h2>The provinces in 3D</h2>
+      <p>
+        The models use all 12 features, but a graph can only show three. These graphs plot each province by poverty incidence, average family income
+        and the share of spending on information and communication, all standardized.
+      </p>
+      <div class="figure-grid">
+        <figure>
+          <img src="assets/clustering.png" alt="3D scatter plot of the 87 provinces colored by k-means cluster, numbered 0 to 8, with the center of each cluster drawn as a large outlined dot.">
+          <figcaption>K-means clusters. Each color is one cluster and each large dot is a cluster center.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/clustering-by-class.png" alt="The same 3D scatter plot colored by the class of each cluster. Clusters 2, 4, 5, 6 and 8 are INCREASE, clusters 0, 1 and 7 are RETAIN and cluster 3 is DECREASE.">
+          <figcaption>The same clusters, colored by the class each one takes from its members. The number is the cluster.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/knn-holdout.png" alt="3D scatter plot of the holdout split for k-nearest neighbors. The 70 training provinces are large outlined dots colored by true class and the 17 testing provinces are small dots colored by predicted class.">
+          <figcaption>K-nearest neighbors, holdout split. Large dots are the 70 training provinces in their true class; small dots are the 17 testing provinces in their predicted class.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/mlp-holdout.png" alt="3D scatter plot of the holdout split for the MLP. The 70 training provinces are large outlined dots colored by true class and the 17 testing provinces are small dots colored by predicted class.">
+          <figcaption>MLP, same holdout split. Large dots are the training provinces in their true class; small dots are the testing provinces in their predicted class.</figcaption>
+        </figure>
+      </div>
+      <ul>
+        <li><strong>The classes follow poverty and income.</strong> INCREASE provinces (red) sit at high poverty and low income, DECREASE provinces (blue) at the opposite corner, and RETAIN provinces (gray) in between.</li>
+        <li><strong>The classes overlap in the middle.</strong> RETAIN and INCREASE provinces are mixed where poverty is near the national average, and most wrong predictions are between these two classes.</li>
+      </ul>
+      <p class="note">
+        These graphs come from the notebook of each model. The k-means graphs cluster all 87 provinces into 9 clusters and the k-nearest neighbors graph uses 4 neighbors,
+        while the scores on this page use 7 clusters and 10 neighbors.
+      </p>
+    </div>
+
+    <div class="section-wrapper">
       <h2>Results</h2>
 
       <h3>Where the models go wrong</h3>
       <figure>
-        <img src="assets/confusion-matrix.png" alt="Three confusion matrices from 5-fold cross validation. K-Means: of 10 DECREASE provinces 5 correct and 5 predicted RETAIN; of 31 RETAIN 22 correct, 5 DECREASE, 4 INCREASE; of 46 INCREASE 34 correct, 11 RETAIN, 1 DECREASE. K-Nearest Neighbors: DECREASE 5 correct, 5 RETAIN; RETAIN 23 correct, 1 DECREASE, 7 INCREASE; INCREASE 37 correct, 9 RETAIN. MLP: DECREASE 5 correct, 5 RETAIN; RETAIN 18 correct, 4 DECREASE, 9 INCREASE; INCREASE 36 correct, 10 RETAIN.">
+        <img src="assets/confusion-matrix.png" alt="Three confusion matrices from 5-fold cross validation. K-Means: of 10 DECREASE provinces 5 correct and 5 predicted RETAIN; of 31 RETAIN 22 correct, 5 DECREASE, 4 INCREASE; of 46 INCREASE 34 correct, 11 RETAIN, 1 DECREASE. K-Nearest Neighbors: DECREASE 5 correct, 5 RETAIN; RETAIN 23 correct, 1 DECREASE, 7 INCREASE; INCREASE 37 correct, 9 RETAIN. MLP: DECREASE 6 correct, 4 RETAIN; RETAIN 22 correct, 2 DECREASE, 7 INCREASE; INCREASE 39 correct, 7 RETAIN.">
         <figcaption>Confusion matrix of each model from 5-fold cross validation. Rows are the actual class, columns the predicted class.</figcaption>
       </figure>
       <ul>
-        <li><strong>Almost every mistake is a near miss.</strong> Of 76 wrong predictions across the three models, 75 involve RETAIN, the middle class. The one exception is an INCREASE province that k-means predicts as DECREASE.</li>
-        <li><strong>KNN makes the fewest mistakes.</strong> It gets 65 of 87 provinces right, against 61 for k-means and 59 for the MLP.</li>
-        <li><strong>The MLP struggles with RETAIN.</strong> It gets 18 of 31 RETAIN provinces right, where k-means gets 22 and KNN 23.</li>
-        <li><strong>All three find the same number of DECREASE provinces:</strong> 5 of 10, with the other 5 predicted as RETAIN.</li>
+        <li><strong>Almost every mistake is a near miss.</strong> Of 68 wrong predictions across the three models, 67 involve RETAIN, the middle class. The one exception is an INCREASE province that k-means predicts as DECREASE.</li>
+        <li><strong>The MLP makes the fewest mistakes.</strong> It gets 67 of 87 provinces right, against 65 for KNN and 61 for k-means.</li>
+        <li><strong>RETAIN is about equally hard for all three.</strong> KNN gets 23 of 31 RETAIN provinces right, and k-means and the MLP 22 each.</li>
+        <li><strong>The MLP finds one more DECREASE province:</strong> 6 of 10, against 5 for k-means and KNN. Every missed DECREASE province is predicted as RETAIN.</li>
       </ul>
 
       <h3>Performance by class</h3>
       <figure>
-        <img src="assets/metrics.png" alt="Bar charts of recall, precision and F1 score per class. Recall for DECREASE, RETAIN, INCREASE: K-Means 0.50, 0.71, 0.74; K-Nearest Neighbors 0.50, 0.74, 0.80; MLP 0.50, 0.58, 0.78. Precision: K-Means 0.45, 0.58, 0.89; K-Nearest Neighbors 0.83, 0.62, 0.84; MLP 0.56, 0.55, 0.80. F1 score: K-Means 0.48, 0.64, 0.81; K-Nearest Neighbors 0.62, 0.68, 0.82; MLP 0.53, 0.56, 0.79.">
+        <img src="assets/metrics.png" alt="Bar charts of recall, precision and F1 score per class. Recall for DECREASE, RETAIN, INCREASE: K-Means 0.50, 0.71, 0.74; K-Nearest Neighbors 0.50, 0.74, 0.80; MLP 0.60, 0.71, 0.85. Precision: K-Means 0.45, 0.58, 0.89; K-Nearest Neighbors 0.83, 0.62, 0.84; MLP 0.75, 0.67, 0.85. F1 score: K-Means 0.48, 0.64, 0.81; K-Nearest Neighbors 0.62, 0.68, 0.82; MLP 0.67, 0.69, 0.85.">
         <figcaption>Recall, precision and F1 score of each class, from the 5-fold predictions.</figcaption>
       </figure>
       <ul>
-        <li><strong>INCREASE is the easiest class.</strong> It is also the largest. Every model reaches an F1 score of about 0.8 on it, and KNN finds 80% of INCREASE provinces.</li>
-        <li><strong>DECREASE is the hardest to find.</strong> With only 10 examples, every model finds half of them. KNN is the most reliable when it does predict DECREASE (precision 0.83, against 0.56 for the MLP and 0.45 for k-means).</li>
-        <li><strong>Holdout and 5-fold disagree about the MLP.</strong> It ties KNN at 82% on the 17 holdout provinces but comes last over five folds, so the holdout score depends heavily on which provinces land in the test set.</li>
-        <li><strong>Accuracy varies a lot by fold.</strong> KNN ranges from 65% to 83%, k-means from 59% to 83% and the MLP from 59% to 82%.</li>
+        <li><strong>INCREASE is the easiest class.</strong> It is also the largest. Every model reaches an F1 score above 0.8 on it, and the MLP finds 85% of INCREASE provinces.</li>
+        <li><strong>DECREASE is the hardest to find.</strong> With only 10 examples, no model finds more than 6 of them. KNN is the most reliable when it does predict DECREASE (precision 0.83, against 0.75 for the MLP and 0.45 for k-means).</li>
+        <li><strong>Holdout and 5-fold rank KNN and the MLP differently.</strong> KNN leads on the 17 holdout provinces (14 right against 13) and the MLP leads over five folds (67 right against 65). Both gaps are one or two provinces, so the two models are close.</li>
+        <li><strong>Accuracy varies a lot by fold.</strong> KNN ranges from 65% to 83%, k-means from 59% to 83% and the MLP from 59% to 88%.</li>
       </ul>
     </div>
 
@@ -434,7 +476,7 @@
     </div>
 
     <footer>
-      Figures and numbers on this page come from <code>model-comparison.ipynb</code> in the project repository.
+      Scores and charts on this page come from <code>model-comparison.ipynb</code> in the project repository. The 3D graphs come from the notebook of each model.
     </footer>
 
   </div>
