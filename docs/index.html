@@ -267,30 +267,15 @@
       </div>
     </header>
 
-    <div class="buttons">
-      <a class="btn-link" href="https://github.com/clarencelubrin/cmsc170-project" target="_blank" rel="noopener">Code</a>
-      <a class="btn-link" href="https://github.com/clarencelubrin/cmsc170-project/blob/main/model-comparison.ipynb" target="_blank" rel="noopener">Comparison notebook</a>
-      <a class="btn-link" href="https://openstat.psa.gov.ph" target="_blank" rel="noopener">Data: PSA OpenSTAT</a>
-      <a class="btn-link" href="#leaderboard">Leaderboard</a>
-    </div>
 
     <div class="section-wrapper">
 
-      <div class="stats">
-        <div class="stat"><div class="stat-value">87</div><div class="stat-label">provinces</div></div>
-        <div class="stat"><div class="stat-value">12</div><div class="stat-label">features</div></div>
-        <div class="stat"><div class="stat-value">3</div><div class="stat-label">models</div></div>
-        <div class="stat"><div class="stat-value">77%</div><div class="stat-label">best 5-fold accuracy</div></div>
-      </div>
-
-      <figure>
         <img src="assets/accuracy.png" alt="Bar charts of accuracy. Holdout validation: K-Means 65%, K-Nearest Neighbors 82%, MLP 76%. K-fold cross validation: K-Means 70%, K-Nearest Neighbors 75%, MLP 77%. A second chart shows accuracy in each of the five folds.">
         <figcaption>Accuracy of each model under holdout validation and 5-fold cross validation (left), and in each fold (right).</figcaption>
       </figure>
     </div>
 
     <div class="section-wrapper" id="leaderboard">
-      <h2>Leaderboard</h2>
       <div class="table-scroll">
         <table class="leaderboard-table">
           <thead>
@@ -424,30 +409,17 @@
 
     <div class="section-wrapper">
       <h2>Results</h2>
-
-      <h3>Where the models go wrong</h3>
       <figure>
         <img src="assets/confusion-matrix.png" alt="Three confusion matrices from 5-fold cross validation. K-Means: of 10 DECREASE provinces 5 correct and 5 predicted RETAIN; of 31 RETAIN 22 correct, 5 DECREASE, 4 INCREASE; of 46 INCREASE 34 correct, 11 RETAIN, 1 DECREASE. K-Nearest Neighbors: DECREASE 5 correct, 5 RETAIN; RETAIN 23 correct, 1 DECREASE, 7 INCREASE; INCREASE 37 correct, 9 RETAIN. MLP: DECREASE 6 correct, 4 RETAIN; RETAIN 22 correct, 2 DECREASE, 7 INCREASE; INCREASE 39 correct, 7 RETAIN.">
         <figcaption>Confusion matrix of each model from 5-fold cross validation. Rows are the actual class, columns the predicted class.</figcaption>
       </figure>
-      <ul>
-        <li><strong>Almost every mistake is a near miss.</strong> Of 68 wrong predictions across the three models, 67 involve RETAIN, the middle class. The one exception is an INCREASE province that k-means predicts as DECREASE.</li>
-        <li><strong>The MLP makes the fewest mistakes.</strong> It gets 67 of 87 provinces right, against 65 for KNN and 61 for k-means.</li>
-        <li><strong>RETAIN is about equally hard for all three.</strong> KNN gets 23 of 31 RETAIN provinces right, and k-means and the MLP 22 each.</li>
-        <li><strong>The MLP finds one more DECREASE province:</strong> 6 of 10, against 5 for k-means and KNN. Every missed DECREASE province is predicted as RETAIN.</li>
-      </ul>
 
       <h3>Performance by class</h3>
       <figure>
         <img src="assets/metrics.png" alt="Bar charts of recall, precision and F1 score per class. Recall for DECREASE, RETAIN, INCREASE: K-Means 0.50, 0.71, 0.74; K-Nearest Neighbors 0.50, 0.74, 0.80; MLP 0.60, 0.71, 0.85. Precision: K-Means 0.45, 0.58, 0.89; K-Nearest Neighbors 0.83, 0.62, 0.84; MLP 0.75, 0.67, 0.85. F1 score: K-Means 0.48, 0.64, 0.81; K-Nearest Neighbors 0.62, 0.68, 0.82; MLP 0.67, 0.69, 0.85.">
         <figcaption>Recall, precision and F1 score of each class, from the 5-fold predictions.</figcaption>
       </figure>
-      <ul>
-        <li><strong>INCREASE is the easiest class.</strong> It is also the largest. Every model reaches an F1 score above 0.8 on it, and the MLP finds 85% of INCREASE provinces.</li>
-        <li><strong>DECREASE is the hardest to find.</strong> With only 10 examples, no model finds more than 6 of them. KNN is the most reliable when it does predict DECREASE (precision 0.83, against 0.75 for the MLP and 0.45 for k-means).</li>
-        <li><strong>Holdout and 5-fold rank KNN and the MLP differently.</strong> KNN leads on the 17 holdout provinces (14 right against 13) and the MLP leads over five folds (67 right against 65). Both gaps are one or two provinces, so the two models are close.</li>
-        <li><strong>Accuracy varies a lot by fold.</strong> KNN ranges from 65% to 83%, k-means from 59% to 83% and the MLP from 59% to 88%.</li>
-      </ul>
+
     </div>
 
     <div class="section-wrapper">
